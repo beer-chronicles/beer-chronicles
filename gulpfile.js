@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var stylus = require('gulp-stylus');
 var connect = require('gulp-connect');
 
 var paths = {
@@ -16,6 +17,13 @@ gulp.task('scripts', function() {
     .pipe(connect.reload());
 });
 
+gulp.task('styles', function() {
+  return gulp.src('./src/styles/main.styl')
+    .pipe(stylus())
+    .pipe(gulp.dest(paths.dest))
+    .pipe(connect.reload());
+});
+
 gulp.task('template', function() {
   return gulp.src('./src/index.html')
     .pipe(gulp.dest(paths.dest))
@@ -25,6 +33,7 @@ gulp.task('template', function() {
 gulp.task('watch', function() {
   gulp.watch('./src/index.html', ['template']);
   gulp.watch('./src/**/*.js', ['scripts']);
+  gulp.watch('./src/**/*.styl', ['styles']);
 });
 
 gulp.task('server', function() {
@@ -35,6 +44,6 @@ gulp.task('server', function() {
   });
 });
 
-gulp.task('build', ['scripts', 'template']);
+gulp.task('build', ['scripts', 'styles', 'template']);
 
 gulp.task('default', ['build', 'watch', 'server']);
