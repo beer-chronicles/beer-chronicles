@@ -1,15 +1,17 @@
 {
   "id": 0,
   "location": "apartment",
-  "dialog": [
-    {
-      "character": "jakob",
-      "text": "What do we do now!?"
-    },
-    {
-      "character": "Karl",
-      "text": "I have no idea :("
-    }
+  "dialogs": {
+    "default": [
+      {
+        "character": "jakob",
+        "text": "What do we do now!?"
+      },
+      {
+        "character": "Karl",
+        "text": "I have no idea :("
+      }
+    ]
   ],
   "choices": [
     {
