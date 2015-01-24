@@ -9,6 +9,8 @@
     <div class="location" style="background-image: url('{{scene.location.backgroundImage}}');" ng-click="nextDialogStep()">
       <div class="content">
         <h1>{{scene.location.title}}</h1>
+        <h2>{{scene.location.description}}</h2>
+        <div>{{scene.introduction}}</div>
         <div class="dialog">
           <img src="{{dialogStep.character.image}}">
           {{dialogStep.character.name}}

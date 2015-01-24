@@ -1,0 +1,76 @@
+{
+  "id": 0,
+  "introduction": "",
+  "location": "apartment",
+  "dialogs": {
+    "default": [
+      {
+        "character": "jakob",
+        "text": "What do we do now!?"
+      },
+      {
+        "character": "Karl",
+        "text": "I have no idea :("
+      }
+    ],
+    "dialogZoeHungry": [
+      {"character": "zoe", "text": "I'm still so hungry..."},
+      {"character": "jokob", "text": "Who cares about food? We need beer!"},
+      {"character": "tracy", "text": "You got munchies again, we know already."},
+      {"character": "karl", "text": "She told us this exactly five times already."}
+    ]
+  },
+  "choices": [
+    {
+      "text": "In the fridge is always beer. Let's have a look!",
+      "character": "jakob",
+      "href": 0
+    }, {
+      "text": "I put all the beer crates in the basement, we should start there.",
+      "character": "jakob",
+      "href": 0
+    }, {
+      "text": "I've seen a bottle falling down and rolling below the sofa. With enough skill we must be able to rescue it.",
+      "character": "karl",
+      "href": 0
+    }, {
+      "text": "Some bottle fell off... lick off those drops...",
+      "character": "zoe",
+      "href": 0
+    }, {
+      "text": "I'm hungry...",
+      "character": "zoe",
+      "href": 0,
+      "dialog": "dialogZoeHungry",
+      "local": {
+        "counters": [
+          { "name": "choiceImHungry",
+            "operation": "add",
+            "amount": 1},
+          { "name": "choiceImHungry",
+            "lessThan": 3}
+        ]
+      }
+    }, {
+      "text": "We should check the beer crate in the kitchen once more for full bottles.",
+      "character": "karl",
+      "href": 0
+    }, {
+      "text": "I know my neighbors well. We can easily ask them for some beer.",
+      "character": "tracy",
+      "href": 0
+    }, {
+      "text": "<Panic and go wild, running in a circle>",
+      "character": "tracy",
+      "href": 0
+    }, {
+      "text": "I know a buddy from the gas station. He has to help us out!",
+      "character": "jakob",
+      "href": 1
+    }, {
+      "text": "I am pretty asure of the fact that there remain all sorts of liquors at my chamber. I invite you all to join me.",
+      "character": "karl",
+      "href": 2
+    }
+  ]
+}

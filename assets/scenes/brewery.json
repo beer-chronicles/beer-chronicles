@@ -1,0 +1,13 @@
+{
+  "id": 3,
+  "location": "brewery",
+  "choices": [
+    {
+      "text": "Drink beer.",
+      "href": 3
+    }, {
+      "text": "Restart game.",
+      "href": 0
+    }
+  ]
+}

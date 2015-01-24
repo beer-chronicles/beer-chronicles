@@ -4,30 +4,23 @@ var angular = require('angular');
 var app = angular.module('beerChronicles', []);
 
 
-app.controller('GameCtrl', ['$http', '$scope', '$log', function($http, $scope, $log) {
+app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $scope, $log, $q) {
   var scenes;
   var locations;
   var characters;
   var globalState = {};
   var dialogCounter = 0;
 
-  $http.get("/assets/locations.json").success(function(data) {
-    locations = data;
-    for (var key in locations) {
-      var img = new Image();
-      img.src = locations[key].backgroundImage;
-    };
-  });
-  $http.get("/assets/characters.json").success(function(data) {
-    characters = data;
-    for (var key in characters) {
-      var img = new Image();
-      img.src = characters[key].image;
-    };
-  });
+  var locationsLoader = $http.get("/assets/locations.json");
+  var charactersLoader = $http.get("/assets/characters.json");
+  var sceneLoaders = ["apartment", "brewery", "gasStation", "lockUp"]
+      .map(function(resource) {
+        return $http.get("/assets/scenes/" + resource + ".json");
+      });
 
   var verifyScenes = function() {
     scenes.forEach(function(scene) {
+      $log.debug("Verifying scene " + scene.location);
       scene.location = locations[scene.location];
       for (k in scene.dialogs) {
         scene.dialogs[k].forEach(function(step) {
@@ -43,8 +36,24 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', function($http, $scope, $
       });
     });
   };
-  $http.get("/assets/scenes.json").success(function(data) {
-    scenes = data;
+  $q.all([locationsLoader, charactersLoader].concat(sceneLoaders)).then(function(data) {
+    locations = data[0].data;
+    for (var key in locations) {
+      var img = new Image();
+      img.src = locations[key].backgroundImage;
+    }
+    characters = data[1].data;
+    for (var key in characters) {
+      var img = new Image();
+      img.src = characters[key].image;
+    }
+    // Scenes begin at index 2
+    var loadedScenes = data.slice(2);
+    loadedScenes = loadedScenes.map(function(result) {
+      return result.data;
+    });
+    scenes = [];
+    scenes = scenes.concat(scenes, loadedScenes);
     verifyScenes();
     $scope.gotoScene(0);
   });
