@@ -11,6 +11,12 @@
         "character": "Karl",
         "text": "I have no idea :("
       }
+    ],
+    "dialogZoeHungry": [
+      {"character": "zoe", "text": "I'm still so hungry..."},
+      {"character": "jokob", "text": "Who cares about food? We need beer!"},
+      {"character": "tracy", "text": "You got munchies again, we know already."},
+      {"character": "karl", "text": "She told us this exactly five times already."}
     ]
   ],
   "choices": [
