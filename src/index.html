@@ -13,13 +13,13 @@
         <div class="introduction" ng-bind-html="scene.introduction|linebreaks"></div>
         <div class="dialog" ng-hide="!dialogStep">
           <div class="avatar" style="background-image: url('{{dialogStep.character.image}}')"></div>
-          <div class="characterName">
-            {{dialogStep.character.name}}
-          </div>
           <div class="characterSpeech">
+            <strong>
+              {{dialogStep.character.name}}
+            </strong><br />
             {{dialogStep.text}}
           </div>
-          <button ng-click="skipDialog()" ng-hide="!developmentMode">Skip dialog</button>
+	        <button ng-click="skipDialog()" ng-hide="!developmentMode">Skip dialog</button>
         </div>
       </div>
       <ol class="choices" ng-hide="dialogStep">
