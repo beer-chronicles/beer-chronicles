@@ -15,7 +15,7 @@
           {{dialogStep.text}}
         </div>
       </div>
-      <ol class="choices">
+      <ol class="choices" ng-hide="dialogStep">
         <li ng-repeat="choice in scene.choices | filter: {show:true}">
         <a href="#" ng-click="onChoiceSelected(choice); $event.stopPropagation();">{{choice.text}}</a>
         </li>
