@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var stylus = require('gulp-stylus');
+var plumber = require('gulp-plumber');
 var connect = require('gulp-connect');
 
 var paths = {
@@ -13,12 +14,14 @@ gulp.task('scripts', function() {
   var bundler = browserify('./src/app.js');
   return bundler.bundle()
     .pipe(source('app.js'))
+    .pipe(plumber())
     .pipe(gulp.dest(paths.dest))
     .pipe(connect.reload());
 });
 
 gulp.task('styles', function() {
   return gulp.src('./src/styles/main.styl')
+    .pipe(plumber())
     .pipe(stylus())
     .pipe(gulp.dest(paths.dest))
     .pipe(connect.reload());
@@ -26,6 +29,7 @@ gulp.task('styles', function() {
 
 gulp.task('template', function() {
   return gulp.src('./src/index.html')
+    .pipe(plumber())
     .pipe(gulp.dest(paths.dest))
     .pipe(connect.reload());
 });
