@@ -54,6 +54,12 @@
     "karlsChamber": [
       {"character": "karl", "text": "You are all welcome. Let's go!"}
     ],
+    "neighbors": [
+      {"character": "tracy", "text": "I think we can just ask one of my friendly neighbors."},
+      {"character": "jakob", "text": "Sounds good. Maybe we also find some other dudes to party."},
+      {"character": "karl", "text": "Let's explore your house."},
+      {"character": "narrator", "text": "<Our dudes go from door to door. Midnight has passed a few hours ago... a lot of happy neighbors.>"}
+    ],
     "dialogZoeHungry": [
       {"character": "zoe", "text": "I'm still so hungry..."},
       {"character": "jakob", "text": "Who cares about food? We need beer!"},
