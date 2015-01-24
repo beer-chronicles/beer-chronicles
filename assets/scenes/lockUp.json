@@ -1,5 +1,5 @@
 {
-  "id": 2,
+  "id": "lockup",
   "location": "lockup",
   "dialog": [
     {
@@ -23,18 +23,18 @@
     {
       "text": "let's ask one of these blue dressed men for a bread, I'm still hungry",
       "character": "zoe",
-      "href": 2
+      "href": "lockup"
     }, {
       "text": "I just have to bend those cell bars and we're as good as free.",
       "character": "jakob",
-      "href": 2
+      "href": "lockup"
     }, {
       "text": "you're all crazy, just ask one of our cellmates for alcohol, and we'll survive until we get the f*** out of here",
       "character": "tracy",
-      "href": 2
+      "href": "lockup"
     }, {
       "text": "roll die",
-      "href": 2
+      "href": "lockup"
     }
   ]
 }

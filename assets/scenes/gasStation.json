@@ -1,5 +1,5 @@
 {
-  "id": 1,
+  "id": "gasStation",
   "location": "gasStation",
 	"dialog": [
       {
@@ -15,19 +15,19 @@
     {
       "text": "We should rob this place! My buddy lied to me so they all have to pay!",
       "character": "jakob",
-      "href": 2
+      "href": "lockup"
     }, {
       "text": "This is a station for the restoration of gasoline for automobiles, I'm pretty sure gasoline is made of alcohol",
       "character": "karl",
-      "href": 1
+      "href": "gasStation"
     }, {
       "text": "We should make a flower offering to the beer god so he can make it rain beer.",
       "character": "zoe",
-      "href": 1
+      "href": "gasStation"
     }, {
       "text": "this can't be the only place ion this goddamn town where we can get alcolhol, let's go somewhere else!",
       "character": "tracy",
-    "href": 3
+    "href": "brewery"
     }, {
       "text": "Drink water.",
       "href": "apartment",
