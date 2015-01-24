@@ -1,22 +1,22 @@
 {
   "karl": {
     "name": "Karl",
-    "image": "/assets/characters/karl.png",
+    "image": "http://placehold.it/200x200/6464c8&text=Karl",
     "color": "#6464C8"
   },
   "zoe": {
     "name": "Zoe",
-    "image": "/assets/characters/zoe.png",
+    "image": "http://placehold.it/200x200/c864c8&text=Zoe",
     "color": "#C864C8"
   },
   "jakob": {
     "name": "Jakob",
-    "image": "/assets/characters/jakob.png",
+    "image": "http://placehold.it/200x200/ff3232&text=Jakob",
     "color": "#FF3232"
   },
   "tracy": {
     "name": "Tracy",
-    "image": "/assets/characters/tracy.png",
+    "image": "http://placehold.it/200x200/ffff32&text=Tracy",
     "color": "#FFFF32"
   }
 }
