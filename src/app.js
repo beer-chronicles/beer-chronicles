@@ -136,7 +136,13 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
 
   $scope.gotoScene = function(id, dialogKey) {
     var scene = scenes[id];
-    scene.dialog = scene.dialogs[dialogKey || "default"];
+    dialogKey = dialogKey || "default";
+    if(scenes.hasOwnProperty("dialogs") && scene.dialogs.hasOwnProperty(dialogKey)) {
+      scene.dialog = scene.dialogs[dialogKey];
+    } else {
+      scene.dialog = [];
+      $log.error("no dialog "+dialogKey);
+    }
     scene.state = scene.state || {};
     $scope.scene = scene;
     dialogCounter = 0;
