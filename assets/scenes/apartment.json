@@ -66,11 +66,11 @@
     }, {
       "text": "I know a buddy from the gas station. He has to help us out!",
       "character": "jakob",
-      "href": 1
+      "href": "gasStation"
     }, {
       "text": "I am pretty asure of the fact that there remain all sorts of liquors at my chamber. I invite you all to join me.",
       "character": "karl",
-      "href": 2
+      "href": "lockup"
     }
   ]
 }

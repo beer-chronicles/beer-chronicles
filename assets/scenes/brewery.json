@@ -1,13 +1,13 @@
 {
-  "id": 3,
+  "id": "brewery",
   "location": "brewery",
   "choices": [
     {
       "text": "Drink beer.",
-      "href": 3
+      "href": "brewery"
     }, {
-      "text": "Restart game.",
-      "href": 0
+      "text": "Drink more beer",
+      "href": "brewery"
     }
   ]
 }
