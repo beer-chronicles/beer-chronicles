@@ -1,16 +1,12 @@
 {
   "id": "gasStation",
   "location": "gasStation",
-	"dialog": [
-      {
-        "character": "jakob",
-        "text": "Awww man, my buddy, who works here told me it would be open 24/7"
-      },
-      {
-        "character": "tracy",
-        "text": "today's probably some legal holiday or something, but we have to search for beer"
-      }
-    ],
+	"dialogs": {
+    "default": [
+      {"character": "jakob", "text": "Awww man. My buddy, who works here, told me it would be open 24/7"},
+      {"character": "tracy", "text": "today's probably some legal holiday or some shit, but we have to search for beer"}
+    ]
+  },
   "choices": [
     {
       "text": "We should rob this place! My buddy lied to me so they all have to pay!",
