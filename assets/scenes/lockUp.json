@@ -1,15 +1,39 @@
 {
   "id": 2,
-  "location": "lookup",
+  "location": "lockup",
+  "dialog": [
+    {
+      "character": "zoe",
+      "text": "it's... silent in here, I like it :)"
+    },
+    {
+      "character": "tracy",
+      "text": "I can't believe this happened, this sucks!"
+    },
+    {
+      "character": "jakob",
+      "text": "nothing can stop me from getting beer, we have to break out!"
+    },
+    {
+      "character": "karl",
+      "text": "I believe there is no way how we can break free from confinement now"
+    }
+  ],
   "choices": [
     {
-      "text": "Apartment",
-      "href": 0
+      "text": "let's ask one of these blue dressed men for a bread, I'm still hungry",
+      "character": "zoe",
+      "href": 2
     }, {
-      "text": "Gas station",
-      "href": 1
+      "text": "I just have to bend those cell bars and we're as good as free.",
+      "character": "jakob",
+      "href": 2
     }, {
-      "text": "Wait here.",
+      "text": "you're all crazy, just ask one of our cellmates for alcohol, and we'll survive until we get the f*** out of here",
+      "character": "tracy",
+      "href": 2
+    }, {
+      "text": "roll die",
       "href": 2
     }
   ]
