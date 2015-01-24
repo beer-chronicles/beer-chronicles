@@ -1,6 +1,5 @@
 {
   "id": "apartment",
-  "introduction": "",
   "location": "apartment",
   "dialogs": {
     "default": [
@@ -36,19 +35,35 @@
     {
       "text": "In the fridge is always beer. Let's have a look!",
       "character": "jakob",
-      "href": "apartment"
+      "href": "apartment",
+      "local": {
+        "deniedBy": ["fridge"],
+        "set": ["fridge"]
+      }
     }, {
       "text": "I put all the beer crates in the basement, we should start there.",
       "character": "jakob",
-      "href": "apartment"
+      "href": "apartment",
+      "local": {
+        "deniedBy": ["basement"],
+        "set": ["basement"]
+      }
     }, {
       "text": "I've seen a bottle falling down and rolling below the sofa. With enough skill we must be able to rescue it.",
       "character": "karl",
-      "href": "apartment"
+      "href": "apartment",
+      "local": {
+        "deniedBy": ["sofa"],
+        "set": ["sofa"]
+      }
     }, {
       "text": "Some bottle fell off... lick off those drops...",
       "character": "zoe",
-      "href": "apartment"
+      "href": "apartment",
+      "local": {
+        "deniedBy": ["lick"],
+        "set": ["lick"]
+      }
     }, {
       "text": "I'm hungry...",
       "character": "zoe",
@@ -66,15 +81,27 @@
     }, {
       "text": "We should check the beer crate in the kitchen once more for full bottles.",
       "character": "karl",
-      "href": "apartment"
+      "href": "apartment",
+      "local": {
+        "deniedBy": ["crate"],
+        "set": ["crate"]
+      }
     }, {
       "text": "I know my neighbors well. We can easily ask them for some beer.",
       "character": "tracy",
-      "href": "apartment"
+      "href": "apartment",
+      "local": {
+        "deniedBy": ["neighbors"],
+        "set": ["neighbors"]
+      }
     }, {
       "text": "<Panic and go wild, running in a circle>",
       "character": "tracy",
-      "href": "apartment"
+      "href": "apartment",
+      "local": {
+        "deniedBy": ["runCircles"],
+        "set": ["runCircles"]
+      }
     }, {
       "text": "I know a buddy from the gas station. He has to help us out!",
       "character": "jakob",

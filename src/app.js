@@ -1,7 +1,8 @@
 var angular = require('angular');
 
-
 var app = angular.module('beerChronicles', []);
+
+app.filter('linebreaks', require('./filters').linebreaks);
 
 
 app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $scope, $log, $q) {
@@ -77,15 +78,17 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
     result = result && requires.every(function(localFlag) {
       return (state[localFlag] || false);
     });
-    result = result && condition.counters.every(function(counter) {
-      var counterState = state[counter.name];
-      var counterValue = (typeof counterState != 'undefined' ? state[counter.name].value : 0);
-      var result = true;
-      result = result && (typeof counter.lessThan == 'undefined' || counterValue < counter.lessThan);
-      result = result && (typeof counter.greaterThan == 'undefined' || counterValue > counter.greaterThan);
-      result = result && (typeof counter.equals == 'undefined' || equals === counter.equals);
-      return result;
-    });
+    if (typeof condition.counters != 'undefined') {
+      result = result && condition.counters.every(function(counter) {
+        var counterState = state[counter.name];
+        var counterValue = (typeof counterState != 'undefined' ? state[counter.name].value : 0);
+        var result = true;
+        result = result && (typeof counter.lessThan == 'undefined' || counterValue < counter.lessThan);
+        result = result && (typeof counter.greaterThan == 'undefined' || counterValue > counter.greaterThan);
+        result = result && (typeof counter.equals == 'undefined' || equals === counter.equals);
+        return result;
+      });
+    }
     return result;
   };
 
