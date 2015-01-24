@@ -6,6 +6,8 @@
   "author": "",
   "license": "",
   "devDependencies": {
-    "gulp": "^3.8.10"
+    "browserify": "^8.1.1",
+    "gulp": "^3.8.10",
+    "vinyl-source-stream": "^1.0.0"
   }
 }
