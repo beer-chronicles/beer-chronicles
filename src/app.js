@@ -9,6 +9,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', function($http, $scope, $
   var locations;
   var characters;
   var globalState = {};
+  var dialogCounter = 0;
 
   $http.get("/assets/locations.json").success(function(data) {
     locations = data;
@@ -121,13 +122,28 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', function($http, $scope, $
     applyStateChanges(choice.local, sceneState);
     applyStateChanges(choice.global, globalState);
     var id = choice.href;
-    $scope.gotoScene(id);
+    $scope.gotoScene(id, choice.dialog || "default");
   };
 
-  $scope.gotoScene = function(id) {
+  $scope.gotoScene = function(id, dialogKey) {
     var scene = scenes[id];
+    scene.dialog = scene.dialogs[dialogKey || "default"];
     scene.state = scene.state || {};
     $scope.scene = scene;
+    dialogCounter = 0;
+    $scope.dialogStep = undefined;
+    $scope.nextDialogStep();
     determineChoices();
   };
+
+  $scope.nextDialogStep = function() {
+    $log.log(dialogCounter);
+    $log.log($scope.scene);
+    if(dialogCounter < $scope.scene.dialog.length) {
+      $scope.dialogStep = $scope.scene.dialog[dialogCounter];
+      dialogCounter++;
+    } else {
+      $scope.dialogStep = undefined;
+    }
+  }
 }]);
