@@ -10,5 +10,8 @@ app.controller('GameCtrl', ['$http', '$scope', function($http, $scope) {
     scenes = data;
     $scope.scene = scenes[0];
   });
+
+  $scope.gotoScene = function(id) {
+    $scope.scene = scenes[id];
   };
 }]);
