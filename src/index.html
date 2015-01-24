@@ -8,7 +8,7 @@
   <body ng-controller="GameCtrl">
     <div class="location" style="background-image: url({{scene.location.backgroundImage}})">
       <h1>{{scene.location.title}}</h1>
-      <ul>
+      <ul class="choices">
         <li ng-repeat="choice in scene.choices">
           <a href="#" ng-click="gotoScene(choice.href)">{{choice.text}}</a>
         </li>
