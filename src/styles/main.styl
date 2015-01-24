@@ -26,12 +26,26 @@ h2
 .introduction
   font-size: 2em;
 
-.characterSpeech {
-  border: 0.2em solid;
-  padding: 1em;
-  border-radius: 1em;
-  background-color: #FFF;
-}
+
+
+.dialog
+  .avatar
+    display: inline-block
+    height: 300px
+    width: 300px
+    background-repeat: no-repeat
+    @keyframes play {
+      0% { background-position: 0px; }
+      100% { background-position: -600px; }
+    }
+    -webkit-animation: play 1s steps(2) infinite
+    animation: play 1s steps(2) infinite
+  .characterSpeech
+    border: 0.2em solid;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #FFF;
+
 .location
   background-position: 50%
   background-repeat: norepeat
