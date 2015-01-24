@@ -24,6 +24,16 @@
       {"character": "narrator", "text": "What do we do now?"},
       {"character": "zoe", "text": "Oh beer... I like beer... too..."}
     ],
+    "tracyRunCircle": [
+      {"character": "narrator", "text": "<Tracy runs in circles. In several circles.>"},
+      {"character": "narrator", "text": "<She is still running. Nothing else happens meanwhile.>"}
+    ],
+    "gasStation": [
+      {"character": "jakob", "text": "Follow me, dudes! I know where to go for the gas station."}
+    ],
+    "karlsChamber": [
+      {"character": "karl", "text": "You are all welcome. Let's go!"}
+    ],
     "dialogZoeHungry": [
       {"character": "zoe", "text": "I'm still so hungry..."},
       {"character": "jakob", "text": "Who cares about food? We need beer!"},
