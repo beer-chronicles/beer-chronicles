@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var connect = require('gulp-connect');
 
 
 gulp.task('scripts', function() {
@@ -8,6 +9,13 @@ gulp.task('scripts', function() {
   return bundler.bundle()
     .pipe(source('app.js'))
     .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('server', function() {
+  connect.server({
+    root: './dist',
+    port: 3000
+  });
 });
 
 gulp.task('default', function() {
