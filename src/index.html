@@ -9,7 +9,7 @@
     <div>{{scene.location}}</div>
     <ul>
       <li ng-repeat="choice in scene.choices">
-        {{choice.text}}
+        <a href="#" ng-click="gotoScene(choice.href)">{{choice.text}}</a>
       </li>
     </ul>
 
