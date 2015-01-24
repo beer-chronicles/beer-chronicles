@@ -4,5 +4,8 @@
   "description": "",
   "main": "",
   "author": "",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "gulp": "^3.8.10"
+  }
 }
