@@ -11,7 +11,7 @@
         <h1>{{scene.location.title}}</h1>
         <h2>{{scene.location.description}}</h2>
         <div class="introduction" ng-bind-html="scene.introduction|linebreaks"></div>
-        <div class="dialog">
+	<div class="dialog" ng-hide="!dialogStep">
           <img src="{{dialogStep.character.image}}">
 	  <div class="characterName">
             {{dialogStep.character.name}}
