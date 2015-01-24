@@ -1,6 +1,6 @@
 {
   "apartment": {
-    "backgroundImage": "http://placehold.it/1920x1080&text=apartment",
+    "backgroundImage": "/assets/images/location-apartment.jpg",
     "title": "The apartment"
   },
   "gasStation": {
