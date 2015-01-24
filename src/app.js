@@ -28,6 +28,11 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', function($http, $scope, $
   var verifyScenes = function() {
     scenes.forEach(function(scene) {
       scene.location = locations[scene.location];
+      for (k in scene.dialogs) {
+        scene.dialogs[k].forEach(function(step) {
+          step.character = characters[step.character];
+        });
+      };
       var sceneName = scene.id + ": " + scene.location.title;
       var sceneIds = scenes.map(function(x) { return x.id; });
       scene.choices.forEach(function(choice) {
