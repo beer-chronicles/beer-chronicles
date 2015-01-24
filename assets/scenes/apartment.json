@@ -33,6 +33,17 @@
       {"character": "jakob", "text": "There is really none left. Guess I drunk too many of those, sorry dudes!"},
       {"character": "karl", "text": "Just like I said. Not a single one left."}
     ],
+    "basement": [
+      {"character": "jakob", "text": "There is always some beer in each basement. We just need to look for it."},
+      {"character": "narrator", "text": "<Our dudes make their way to the basement. It's quite dark down there.>"},
+      {"character": "zoe", "text": "Is this beer?"},
+      {"character": "karl", "text": "Zoe, the basement is down here. Come with us."},
+      {"character": "tracy", "text": "I cannot imagine to have beer in my basement."},
+      {"character": "jakob", "text": "There has to be beer. You are just to dump to find it."},
+      {"character": "karl", "text": "Oh, I found something very interesting..."},
+      {"character": "narrator", "text": "<Nobody values Karl's valuable discovery. They all just look for beer, like Karl.>"},
+      {"character": "zoe", "text": "I feel so lonely... where are my dudes?"}
+    ],
     "tracyRunCircle": [
       {"character": "narrator", "text": "<Tracy runs in circles. In several circles.>"},
       {"character": "narrator", "text": "<She is still running. Nothing else happens meanwhile.>"}
@@ -76,7 +87,7 @@
       "dialog": "belowSofa",
       "local": {
         "deniedBy": ["sofa"],
-        "set": ["sofa"]
+        "set": ["sofa", "daemonScroll"]
       }
     }, {
       "text": "Some bottle fell off... lick off those drops...",
