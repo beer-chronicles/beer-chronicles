@@ -8,12 +8,12 @@
       {"character": "karl", "text": "It shall be an honor for me to serve you some beer."},
       {"character": "narrator", "text": "<Karl leaves and returns a few minutes later...>"},
       {"character": "karl", "text": "I'm very sorry, but I have to make you aware of the fact, that there is no more beer available."},
-      {"character": "tracy", "text": "Oh Karl, please don't joke on us."},
+      {"character": "tracy", "text": "Oh Karl, please don't mess with us."},
       {"character": "jakob", "text": "Dude, that can't be true. I carried like tons of beer. You just lost your glasses again, ain't ya?"},
       {"character": "tracy", "text": "Nah, don't be mean now, sweety. Just bring me a beer, would you?"},
       {"character": "jakob", "text": "Yeah, Karl got his strengths hidden deep inside. I'll help you on this one, mate. Come with me!"},
       {"character": "narrator", "text": "<Jakob and Karl leave to look for beer...>"},
-      {"character": "jakob", "text": "F***, he'd been f***ing serious?!"},
+      {"character": "jakob", "text": "F***, he was f***ing serious!"},
       {"character": "tracy", "text": "Damn, this party is over now :("},
       {"character": "karl", "text": "Just like I told you... it's logical, but in fact very disappointing."},
       {"character": "jakob", "text": "What..."},
@@ -96,8 +96,12 @@
       "href": "apartment",
       "dialog": "basement",
       "local": {
+        "requires": ["fridge"],
         "deniedBy": ["basement"],
-        "set": ["basement", "daemonScroll"]
+        "set": ["basement"]
+      },
+      "global": {
+        "set": ["demonScroll"]
       }
     }, {
       "text": "I've seen a bottle falling down and rolling below the sofa. With enough skill we must be able to rescue it.",
@@ -105,8 +109,12 @@
       "href": "apartment",
       "dialog": "belowSofa",
       "local": {
+        "requires": ["crate"],
         "deniedBy": ["sofa"],
-        "set": ["sofa", "moldyToast"]
+        "set": ["sofa"]
+      },
+      "global": {
+        "set": ["moldyToast"]
       }
     }, {
       "text": "Some bottle fell off... lick off those drops...",
@@ -123,6 +131,7 @@
       "href": "apartment",
       "dialog": "dialogZoeHungry",
       "local": {
+        "requires": ["lick"],
         "counters": [
           { "name": "choiceImHungry",
             "operation": "add",
@@ -146,6 +155,7 @@
       "href": "apartment",
       "dialog": "neighbors",
       "local": {
+        "requires": ["runCircles"],
         "deniedBy": ["neighbors"],
         "set": ["neighbors"]
       }
@@ -162,12 +172,18 @@
       "text": "I know a buddy from the gas station. He has to help us out!",
       "character": "jakob",
       "dialog": "gasStation",
-      "href": "gasStation"
+      "href": "gasStation",
+      "local": {
+        "requires": ["basement"]
+      }
     }, {
       "text": "I am pretty asure of the fact that there remain all sorts of liquors at my chamber. I invite you all to join me.",
       "character": "karl",
       "dialog": "karlsChamber",
-      "href": "lockup"
+      "href": "lockup",
+      "local": {
+        "requires": ["sofa"]
+      }
     }
   ]
 }
