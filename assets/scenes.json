@@ -1,37 +1,70 @@
 [
-    {
-        "id": 0,
-        "location": {
-            "backgroundImage": "assets/locations/apartment.jpg",
-            "title": "The apartment"
-        },
-        "choices": [
-        {
-            "text": "Wir gehen Bier holen an der Tanke!",
-            "href": 1
-        }, {
-            "text": "Wir warten hier erstmal.",
-            "href": 0
-        }, {
-            "text": "Wir suchen eine Brauerei.",
-            "href": 2
-        }
-        ]
+  {
+    "id": 0,
+    "location": {
+      "backgroundImage": "http://placehold.it/1920x1080&text=apartment",
+      "title": "Apartment"
     },
-    {
-        "id": 1,
-        "location": {
-            "backgroundImage": "assets/locations/tankstelle.jpg",
-            "title": "Gas station"
-        },
-        "choices": [
-            {
-                "text": "Einbrechen",
-                "href": 1
-            }, {
-                "text": "Klingeln",
-                "href": 2
-            }
-        ]
-    }
+    "choices": [
+      {
+        "text": "Wait here.",
+        "href": 0
+      }, {
+        "text": "Gas station.",
+        "href": 1
+      }, {
+        "text": "Brewery.",
+        "href": 3
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "location": {
+      "backgroundImage": "http://placehold.it/1920x1080&text=gas-station",
+      "title": "Gas station"
+    },
+    "choices": [
+      {
+        "text": "Brewery",
+        "href": 3
+      }, {
+        "text": "Lockup",
+        "href": 2
+      }
+    ]
+  }, {
+    "id": 2,
+    "location": {
+      "backgroundImage": "http://placehold.it/1920x1080&text=lockup",
+      "title": "Lockup"
+    },
+    "choices": [
+      {
+        "text": "Apartment",
+        "href": 0
+      }, {
+        "text": "Gas station",
+        "href": 1
+      }, {
+        "text": "Wait here.",
+        "href": 2
+      }
+    ]
+  }, {
+    "id": 3,
+    "location": {
+      "backgroundImage": "http://placehold.it/1920x1080&text=brewery",
+      "title": "Brewery"
+    },
+    "choices": [
+      {
+        "text": "Drink beer.",
+        "href": 3
+      }, {
+        "text": "Restart game.",
+        "href": 0
+      }
+    ]
+  }
 ]
