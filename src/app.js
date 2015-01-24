@@ -12,7 +12,11 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
 
   var locationsLoader = $http.get("/assets/locations.json");
   var charactersLoader = $http.get("/assets/characters.json");
-
+  var sceneLoaders = ["/assets/scenes/apartment.json", "/assets/scenes/brewery.json", "/assets/scenes/gasStation.json", "/assets/scenes/lockUp.json"]
+      .map(function(resource) {
+        return $http.get(resource);
+      });
+ 
   var verifyScenes = function() {
     scenes.forEach(function(scene) {
       $log.debug("Verifying scene " + scene.location);
@@ -26,7 +30,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
       });
     });
   };
-  $q.all([locationsLoader, charactersLoader]).then(function(data) {
+  $q.all([locationsLoader, charactersLoader].concat(sceneLoaders)).then(function(data) {
     locations = data[0].data;
     for (var key in locations) {
       var img = new Image();
@@ -37,11 +41,15 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
       var img = new Image();
       img.src = characters[key].image;
     }
-    $http.get("/assets/scenes.json").success(function(data) {
-      scenes = data;
-      verifyScenes();
-      $scope.gotoScene(0);
+    // Scenes begin at index 2
+    var loadedScenes = data.slice(2);
+    loadedScenes = loadedScenes.map(function(result) {
+      return result.data;
     });
+    scenes = [];
+    scenes = scenes.concat(scenes, loadedScenes);
+    verifyScenes();
+    $scope.gotoScene(0);
   });
 
   var areConditionsFulfilled = function(condition, state) {
