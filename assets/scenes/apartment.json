@@ -98,7 +98,10 @@
       "local": {
         "requires": ["fridge"],
         "deniedBy": ["basement"],
-        "set": ["basement", "daemonScroll"]
+        "set": ["basement"]
+      },
+      "global": {
+        "set": ["demonScroll"]
       }
     }, {
       "text": "I've seen a bottle falling down and rolling below the sofa. With enough skill we must be able to rescue it.",
@@ -108,7 +111,10 @@
       "local": {
         "requires": ["crate"],
         "deniedBy": ["sofa"],
-        "set": ["sofa", "moldyToast"]
+        "set": ["sofa"]
+      },
+      "global": {
+        "set": ["moldyToast"]
       }
     }, {
       "text": "Some bottle fell off... lick off those drops...",
