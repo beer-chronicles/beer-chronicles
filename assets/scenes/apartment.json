@@ -37,7 +37,7 @@
     "dialogZoeHungry": [
       {"character": "zoe", "text": "I'm still so hungry..."},
       {"character": "jakob", "text": "Who cares about food? We need beer!"},
-      {"character": "tracy", "text": "You got munchies again, we know already."},
+      {"character": "tracy", "text": "You got munchies again, we know that already."},
       {"character": "karl", "text": "She told us this exactly five times already."}
     ]
   },
