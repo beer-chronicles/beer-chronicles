@@ -81,9 +81,9 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', function($http, $scope, $
     var countersToChange = changes.counters || [];
     countersToChange.forEach(function(change) {
       if (typeof change.operation == 'undefined')
-        return; 
+        return;
       var counterState = state[change.name] || { "value": 0};
-      state[change.name] = counterState; 
+      state[change.name] = counterState;
       switch (change.operation) {
         case "add":
           counterState.value += change.amount;
