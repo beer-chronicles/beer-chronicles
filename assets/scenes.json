@@ -50,6 +50,7 @@
   {
     "id": 1,
     "location": "gasStation",
+    "dialog": [],
     "choices": [
       {
         "text": "Brewery",
@@ -62,6 +63,7 @@
   }, {
     "id": 2,
     "location": "lookup",
+    "dialog": [],
     "choices": [
       {
         "text": "Apartment",
@@ -77,6 +79,7 @@
   }, {
     "id": 3,
     "location": "brewery",
+    "dialog": [],
     "choices": [
       {
         "text": "Drink beer.",
