@@ -13,7 +13,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
 
   var locationsLoader = $http.get("/assets/locations.json");
   var charactersLoader = $http.get("/assets/characters.json");
-  var sceneLoaders = ["apartment", "brewery", "gasStation", "lockUp"]
+  var sceneLoaders = ["start", "apartment", "brewery", "gasStation", "lockUp"]
       .map(function(resource) {
         return $http.get("/assets/scenes/" + resource + ".json");
       });
