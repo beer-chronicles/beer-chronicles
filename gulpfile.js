@@ -18,6 +18,11 @@ gulp.task('template', function() {
     .pipe(connect.reload());
 });
 
+gulp.task('watch', function() {
+  gulp.watch('./src/index.html', ['template']);
+  gulp.watch('./src/**/*.js', ['scripts']);
+});
+
 gulp.task('server', function() {
   connect.server({
     root: './dist',
@@ -28,4 +33,4 @@ gulp.task('server', function() {
 
 gulp.task('build', ['scripts', 'template']);
 
-gulp.task('default', ['build', 'server']);
+gulp.task('default', ['build', 'watch', 'server']);
