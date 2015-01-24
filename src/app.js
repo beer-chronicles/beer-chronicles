@@ -13,7 +13,11 @@ app.controller('GameCtrl', ['$http', '$scope', function($http, $scope) {
   $http.get("/assets/scenes.json").success(function(data) {
     scenes = data;
     scenes.forEach(function(s) {
-      s.location = locations[s.location];
+      if (!(s.location in locations)) {
+        console.error("Unknown location \""+s.location+"\"");
+      } else {
+        s.location = locations[s.location];
+      }
     });
     $scope.scene = scenes[0];
   });
