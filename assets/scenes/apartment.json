@@ -24,6 +24,15 @@
       {"character": "narrator", "text": "What do we do now?"},
       {"character": "zoe", "text": "Oh beer... I like beer... too..."}
     ],
+    "fridge": [
+      {"character": "zoe", "text": "Fridge? Which fridge?"},
+      {"character": "karl", "text": "The fridge, we took all the beers. until there had been non left."},
+      {"character": "jakob", "text": "No, I'm sure I put some more in there earlier. To keep them as cool as I am."},
+      {"character": "tracy", "text": "Oh boys, just have a look and bring me my beer!"},
+      {"character": "narrator", "text": "<Jakob and Karl leave once again together to look for beer - again.>"},
+      {"character": "jakob", "text": "There is really none left. Guess I drunk too many of those, sorry dudes!"},
+      {"character": "karl", "text": "Just like I said. Not a single one left."}
+    ],
     "tracyRunCircle": [
       {"character": "narrator", "text": "<Tracy runs in circles. In several circles.>"},
       {"character": "narrator", "text": "<She is still running. Nothing else happens meanwhile.>"}
