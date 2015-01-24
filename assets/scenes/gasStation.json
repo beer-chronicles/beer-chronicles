@@ -30,7 +30,7 @@
     "href": 3
     }, {
       "text": "Drink water.",
-      "href": 0,
+      "href": "apartment",
       "local": {
         "unset": ["bottleOfWater"],
         "requires": ["bottleOfWater"],
@@ -42,7 +42,7 @@
       }
     }, {
       "text": "Fill up bottle of water",
-      "href": 0,
+      "href": "apartment",
       "local": {
         "set": ["bottleOfWater"],
         "counters": [

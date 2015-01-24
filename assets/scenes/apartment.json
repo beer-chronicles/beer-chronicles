@@ -1,5 +1,5 @@
 {
-  "id": 0,
+  "id": "apartment",
   "introduction": "",
   "location": "apartment",
   "dialogs": {
@@ -24,23 +24,23 @@
     {
       "text": "In the fridge is always beer. Let's have a look!",
       "character": "jakob",
-      "href": 0
+      "href": "apartment"
     }, {
       "text": "I put all the beer crates in the basement, we should start there.",
       "character": "jakob",
-      "href": 0
+      "href": "apartment"
     }, {
       "text": "I've seen a bottle falling down and rolling below the sofa. With enough skill we must be able to rescue it.",
       "character": "karl",
-      "href": 0
+      "href": "apartment"
     }, {
       "text": "Some bottle fell off... lick off those drops...",
       "character": "zoe",
-      "href": 0
+      "href": "apartment"
     }, {
       "text": "I'm hungry...",
       "character": "zoe",
-      "href": 0,
+      "href": "apartment",
       "dialog": "dialogZoeHungry",
       "local": {
         "counters": [
@@ -54,15 +54,15 @@
     }, {
       "text": "We should check the beer crate in the kitchen once more for full bottles.",
       "character": "karl",
-      "href": 0
+      "href": "apartment"
     }, {
       "text": "I know my neighbors well. We can easily ask them for some beer.",
       "character": "tracy",
-      "href": 0
+      "href": "apartment"
     }, {
       "text": "<Panic and go wild, running in a circle>",
       "character": "tracy",
-      "href": 0
+      "href": "apartment"
     }, {
       "text": "I know a buddy from the gas station. He has to help us out!",
       "character": "jakob",
