@@ -32,7 +32,16 @@
       }, {
         "text": "I'm hungry...",
         "character": "zoe",
-        "href": 0
+        "href": 0,
+        "local": {
+          "counters": [
+            { "name": "choiceImHungry",
+              "operation": "add",
+              "amount": 1},
+            { "name": "choiceImHungry",
+              "lessThan": 3}
+          ]
+        }
       }, {
         "text": "We should check the beer crate in the kitchen once more for full bottles.",
         "character": "karl",
