@@ -1,6 +1,5 @@
 {
   "id": "apartment",
-  "introduction": "",
   "location": "apartment",
   "dialogs": {
     "default": [
