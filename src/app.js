@@ -144,7 +144,6 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
     var choiceCounter = sceneState["choiceCounter"] || {value : 0 };
     sceneState["choiceCounter"] = choiceCounter;
     choiceCounter.value++;
-    $log.log(choiceCounter);
     applyStateChanges(choice.local, sceneState);
     applyStateChanges(choice.global, globalState);
     var id = choice.href;
