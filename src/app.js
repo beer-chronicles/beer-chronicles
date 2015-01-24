@@ -4,29 +4,18 @@ var angular = require('angular');
 var app = angular.module('beerChronicles', []);
 
 
-app.controller('GameCtrl', ['$http', '$scope', '$log', function($http, $scope, $log) {
+app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $scope, $log, $q) {
   var scenes;
   var locations;
   var characters;
   var globalState = {};
 
-  $http.get("/assets/locations.json").success(function(data) {
-    locations = data;
-    for (var key in locations) {
-      var img = new Image();
-      img.src = locations[key].backgroundImage;
-    };
-  });
-  $http.get("/assets/characters.json").success(function(data) {
-    characters = data;
-    for (var key in characters) {
-      var img = new Image();
-      img.src = characters[key].image;
-    };
-  });
+  var locationsLoader = $http.get("/assets/locations.json");
+  var charactersLoader = $http.get("/assets/characters.json");
 
   var verifyScenes = function() {
     scenes.forEach(function(scene) {
+      $log.debug("Verifying scene " + scene.location);
       scene.location = locations[scene.location];
       var sceneName = scene.id + ": " + scene.location.title;
       var sceneIds = scenes.map(function(x) { return x.id; });
@@ -37,10 +26,22 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', function($http, $scope, $
       });
     });
   };
-  $http.get("/assets/scenes.json").success(function(data) {
-    scenes = data;
-    verifyScenes();
-    $scope.gotoScene(0);
+  $q.all([locationsLoader, charactersLoader]).then(function(data) {
+    locations = data[0].data;
+    for (var key in locations) {
+      var img = new Image();
+      img.src = locations[key].backgroundImage;
+    }
+    characters = data[1].data;
+    for (var key in characters) {
+      var img = new Image();
+      img.src = characters[key].image;
+    }
+    $http.get("/assets/scenes.json").success(function(data) {
+      scenes = data;
+      verifyScenes();
+      $scope.gotoScene(0);
+    });
   });
 
   var areConditionsFulfilled = function(condition, state) {
