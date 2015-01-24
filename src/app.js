@@ -5,8 +5,8 @@ var app = angular.module('beerChronicles', []);
 
 
 app.controller('GameCtrl', ['$http', '$scope', function($http, $scope) {
-  var scenes = [];
-  var locations = [];
+  var scenes;
+  var locations;
   var characters;
   $http.get("/assets/locations.json").success(function(data) {
     locations = data;
