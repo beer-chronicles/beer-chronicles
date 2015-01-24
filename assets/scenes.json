@@ -3,34 +3,67 @@
     "id": 0,
     "location": {
       "backgroundImage": "assets/locations/apartment.jpg",
-      "title": "The apartment"
+      "title": "Apartment"
     },
     "choices": [
       {
-        "text": "Wir gehen Bier holen an der Tanke!",
+        "text": "Wait here.",
+        "href": 0
+      }, {
+        "text": "Gas station.",
         "href": 1
       }, {
-      "text": "Wir warten hier erstmal.",
-      "href": 0
-      }, {
-      "text": "Wir suchen eine Brauerei.",
-      "href": 2
+        "text": "Brewery.",
+        "href": 3
       }
     ]
   },
   {
     "id": 1,
     "location": {
-      "backgroundImage": "assets/locations/tankstelle.jpg",
+      "backgroundImage": "assets/locations/gas-station.jpg",
       "title": "Gas station"
     },
     "choices": [
       {
-        "text": "Einbrechen",
+        "text": "Brewery",
+        "href": 3
+      }, {
+        "text": "Lockup",
+        "href": 2
+      }
+    ]
+  }, {
+    "id": 2,
+    "location": {
+      "backgroundImage": "assets/locations/lockup.jpg",
+      "title": "Lockup"
+    },
+    "choices": [
+      {
+        "text": "Apartment",
+        "href": 0
+      }, {
+        "text": "Gas station",
         "href": 1
       }, {
-      "text": "Klingeln",
-      "href": 2
+        "text": "Wait here.",
+        "href": 2
+      }
+    ]
+  }, {
+    "id": 3,
+    "location": {
+      "backgroundImage": "assets/locations/brewery.jpg",
+      "title": "Brewery"
+    },
+    "choices": [
+      {
+        "text": "Drink beer.",
+        "href": 3
+      }, {
+        "text": "Restart game.",
+        "href": 0
       }
     ]
   }
