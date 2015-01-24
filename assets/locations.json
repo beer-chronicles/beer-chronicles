@@ -15,8 +15,8 @@
     "backgroundImage": "http://placehold.it/1920x1080&text=lockup",
     "title": "Lockup"
   },
-  "brewery": {
-    "backgroundImage": "http://placehold.it/1920x1080&text=brewery",
-    "title": "Brewery"
+  "funfair": {
+    "backgroundImage": "http://placehold.it/1920x1080&text=notTheBrewery",
+    "title": "Funfair"
   }
 }

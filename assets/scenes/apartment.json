@@ -13,7 +13,7 @@
       {"character": "tracy", "text": "Nah, don't be mean now, sweety. Just bring me a beer, would you?"},
       {"character": "jakob", "text": "Yeah, Karl got his strengths hidden deep inside. I'll help you on this one, mate. Come with me!"},
       {"character": "narrator", "text": "<Jakob and Karl leave to look for beer...>"},
-      {"character": "jakob", "text": "F***, he's be f***ing serious?!"},
+      {"character": "jakob", "text": "F***, he'd been f***ing serious?!"},
       {"character": "tracy", "text": "Damn, this party is over now :("},
       {"character": "karl", "text": "Just like I told you... it's logical, but in fact very disapointing."},
       {"character": "jakob", "text": "What..."},
@@ -26,8 +26,8 @@
     ],
     "fridge": [
       {"character": "zoe", "text": "Fridge? Which fridge?"},
-      {"character": "karl", "text": "The fridge, we took all the beers. until there had been non left."},
-      {"character": "jakob", "text": "No, I'm sure I put some more in there earlier. To keep them as cool as I am."},
+      {"character": "karl", "text": "The fridge, we took all the beers. Until there had been non left."},
+      {"character": "jakob", "text": "No, I'm sure I put some more in there earlier - to keep them as cool as I am."},
       {"character": "tracy", "text": "Oh boys, just have a look and bring me my beer!"},
       {"character": "narrator", "text": "<Jakob and Karl leave once again together to look for beer - again.>"},
       {"character": "jakob", "text": "There is really none left. Guess I drunk too many of those, sorry dudes!"},
@@ -65,7 +65,7 @@
       {"character": "zoe", "text": "Oh, I found a moldy toast."}
     ],
     "crashedBottle": [
-      {"character": "tracy", "text": "Oh Zoe, leave that alone. You're to drunk or whatever you are..."}
+      {"character": "tracy", "text": "Oh Zoe, leave that alone. You're too drunk or whatever you are..."}
     ],
     "neighbors": [
       {"character": "tracy", "text": "I think we can just ask one of my friendly neighbors."},
