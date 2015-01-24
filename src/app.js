@@ -1,7 +1,8 @@
 var angular = require('angular');
 
-
 var app = angular.module('beerChronicles', []);
+
+app.filter('linebreaks', require('./filters').linebreaks);
 
 
 app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $scope, $log, $q) {

@@ -1,6 +1,6 @@
 {
   "id": "start",
-  "introduction": ["Once upon a time four dudes were having a great time together. They all gathered - like they tend to do from time to time - at Sue's apartment. Today we join them to one of those so joyful evenings. Therefore all of them had already a few - or you could honestly say a few more - drinks. Precisely we talk about beers now. Because this must most obviously be the major reason for the pleasantness of those evenings. This time all went along as regular, until...", " ...until there was no beer..."],
+  "introduction": "Once upon a time four dudes were having a great time together. They all gathered - like they tend to do from time to time - at Sue's apartment. Today we join them to one of those so joyful evenings. Therefore all of them had already a few - or you could honestly say a few more - drinks. Precisely we talk about beers now. Because this must most obviously be the major reason for the pleasantness of those evenings. This time all went along as regular, until...\n...until there was no beer...",
   "location": "black",
   "choices": [
     {
