@@ -4,18 +4,30 @@
   "location": "apartment",
   "dialogs": {
     "default": [
-      {
-        "character": "jakob",
-        "text": "What do we do now!?"
-      },
-      {
-        "character": "karl",
-        "text": "I have no idea :("
-      }
+      {"character": "tracy", "text": "I feel like having another beer. Please bring along a beer for your party queen."},
+      {"character": "jakob", "text": "Oh, great idea. Add one for me, please."},
+      {"character": "karl", "text": "It shall be an honor for me to serve you some beer."},
+      {"character": "narrator", "text": "<Karl leaves and returns a few minutes later...>"},
+      {"character": "karl", "text": "I'm very sorry, but I have to make you aware of the fact, that there is no more beer available."},
+      {"character": "tracy", "text": "Oh Karl, please don't joke on us."},
+      {"character": "jakob", "text": "Dude, that can't be true. I carried like tons of beer . You just lost your glasses again, ain't ya?"},
+      {"character": "tracy", "text": "Nah, don't be mean now, sweety. Just bring me a beer, would you?"},
+      {"character": "jakob", "text": "Yeah, Karl got his strengths hidden deep inside. I'll help you on this one, mate. Come with me!"},
+      {"character": "narrator", "text": "<Jakob and Karl leave to look for beer...>"},
+      {"character": "jakob", "text": "F***, he's be f***ing serious?!"},
+      {"character": "tracy", "text": "Damn, this party is over now :("},
+      {"character": "karl", "text": "Just like I told you... it's logical, but in fact very disapointing."},
+      {"character": "jakob", "text": "What..."},
+      {"character": "tracy", "text": "...do..."},
+      {"character": "karl", "text": "...we..."},
+      {"character": "tracy", "text": "...do..."},
+      {"character": "jakob", "text": "...now?"},
+      {"character": "narrator", "text": "What do we do now?"},
+      {"character": "zoe", "text": "Oh beer... I like beer... too..."}
     ],
     "dialogZoeHungry": [
       {"character": "zoe", "text": "I'm still so hungry..."},
-      {"character": "jakob", "text": "Who cares about food? We need beer!"},
+      {"character": "jokob", "text": "Who cares about food? We need beer!"},
       {"character": "tracy", "text": "You got munchies again, we know already."},
       {"character": "karl", "text": "She told us this exactly five times already."}
     ]
