@@ -92,6 +92,9 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
         return result;
       });
     }
+    if (typeof condition.chance != 'undefined') {
+      result = result && condition.chance < Math.random();
+    }
     return result;
   };
 

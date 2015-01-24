@@ -184,6 +184,13 @@
       "local": {
         "requires": ["sofa"]
       }
+    }, {
+      "text": "Random test",
+      "character": "karl",
+      "href": "apartment",
+      "local": {
+	"chance": 0.8
+      }
     }
   ]
 }
