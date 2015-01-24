@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var path = require('path');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var stylus = require('gulp-stylus');
@@ -6,6 +7,7 @@ var plumber = require('gulp-plumber');
 var connect = require('gulp-connect');
 
 var paths = {
+  assets: './assets/**/*',
   dest: './dist'
 };
 
@@ -34,6 +36,13 @@ gulp.task('template', function() {
     .pipe(connect.reload());
 });
 
+gulp.task('assets', function() {
+  gulp.src(paths.assets)
+    .pipe(plumber())
+    .pipe(gulp.dest(path.join(paths.dest, 'assets')))
+    .pipe(connect.reload());
+});
+
 gulp.task('watch', function() {
   gulp.watch('./src/index.html', ['template']);
   gulp.watch('./src/**/*.js', ['scripts']);
@@ -48,6 +57,6 @@ gulp.task('server', function() {
   });
 });
 
-gulp.task('build', ['scripts', 'styles', 'template']);
+gulp.task('build', ['assets', 'scripts', 'styles', 'template']);
 
 gulp.task('default', ['build', 'watch', 'server']);
