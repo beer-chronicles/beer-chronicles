@@ -133,6 +133,9 @@
       "local": {
         "requires": ["lick"],
         "counters": [
+          { "name": "choiceCounter",
+            "operation": "sub",
+            "amount": 1},
           { "name": "choiceImHungry",
             "operation": "add",
             "amount": 1},
@@ -174,7 +177,10 @@
       "dialog": "gasStation",
       "href": "gasStation",
       "local": {
-        "requires": ["basement"]
+        "counters": [
+          { "name": "choiceCounter",
+            "greaterThan": 3}
+        ]
       }
     }, {
       "text": "I am pretty asure of the fact that there remain all sorts of liquors at my chamber. I invite you all to join me.",
@@ -182,7 +188,10 @@
       "dialog": "karlsChamber",
       "href": "lockup",
       "local": {
-        "requires": ["sofa"]
+        "counters": [
+          { "name": "choiceCounter",
+            "greaterThan": 4}
+        ]
       }
     }, {
       "text": "Random test",
