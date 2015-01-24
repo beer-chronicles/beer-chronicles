@@ -3,18 +3,22 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var connect = require('gulp-connect');
 
+var paths = {
+  dest: './dist'
+};
+
 
 gulp.task('scripts', function() {
   var bundler = browserify('./src/app.js');
   return bundler.bundle()
     .pipe(source('app.js'))
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest(paths.dest))
     .pipe(connect.reload());
 });
 
 gulp.task('template', function() {
   return gulp.src('./src/index.html')
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest(paths.dest))
     .pipe(connect.reload());
 });
 
