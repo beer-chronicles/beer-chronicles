@@ -54,6 +54,19 @@
     "karlsChamber": [
       {"character": "karl", "text": "You are all welcome. Let's go!"}
     ],
+    "searchBeerCrate": [
+      {"character": "karl", "text": "It is very propable that within 12 bottles on remains filled."},
+      {"character": "jakob", "text": "You're so cool in maths, but so wrong with the beer, dude!"}
+    ],
+    "belowSofa": [
+      {"character": "karl", "text": "I'm very, very sure that a bottle got lost below the sofa."},
+      {"character": "zoe", "text": "Oh poor bottle, we have to rescue her!"},
+      {"character": "tracy", "text": "No don't search there! You won't find anything!"},
+      {"character": "zoe", "text": "Oh, I found a moldy toast."}
+    ],
+    "crashedBottle": [
+      {"character": "tracy", "text": "Oh Zoe, leave that alone. You're to drunk or whatever you are..."}
+    ],
     "neighbors": [
       {"character": "tracy", "text": "I think we can just ask one of my friendly neighbors."},
       {"character": "jakob", "text": "Sounds good. Maybe we also find some other dudes to party."},
@@ -93,7 +106,7 @@
       "dialog": "belowSofa",
       "local": {
         "deniedBy": ["sofa"],
-        "set": ["sofa"]
+        "set": ["sofa", "moldyToast"]
       }
     }, {
       "text": "Some bottle fell off... lick off those drops...",
