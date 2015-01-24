@@ -2,7 +2,7 @@
   {
     "id": 0,
     "location": {
-      "backgroundImage": "assets/locations/apartment.jpg",
+      "backgroundImage": "http://placehold.it/1920x1080&text=apartment",
       "title": "Apartment"
     },
     "choices": [
@@ -21,7 +21,7 @@
   {
     "id": 1,
     "location": {
-      "backgroundImage": "assets/locations/gas-station.jpg",
+      "backgroundImage": "http://placehold.it/1920x1080&text=gas-station",
       "title": "Gas station"
     },
     "choices": [
@@ -36,7 +36,7 @@
   }, {
     "id": 2,
     "location": {
-      "backgroundImage": "assets/locations/lockup.jpg",
+      "backgroundImage": "http://placehold.it/1920x1080&text=lockup",
       "title": "Lockup"
     },
     "choices": [
@@ -54,7 +54,7 @@
   }, {
     "id": 3,
     "location": {
-      "backgroundImage": "assets/locations/brewery.jpg",
+      "backgroundImage": "http://placehold.it/1920x1080&text=brewery",
       "title": "Brewery"
     },
     "choices": [
