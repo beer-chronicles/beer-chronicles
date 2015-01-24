@@ -13,13 +13,14 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
 
   var locationsLoader = $http.get("/assets/locations.json");
   var charactersLoader = $http.get("/assets/characters.json");
-  var sceneLoaders = ["apartment", "brewery", "gasStation", "lockUp"]
+  var sceneLoaders = ["start", "apartment", "brewery", "gasStation", "lockUp"]
       .map(function(resource) {
         return $http.get("/assets/scenes/" + resource + ".json");
       });
 
   var verifyScenes = function() {
-    scenes.forEach(function(scene) {
+    Object.keys(scenes).forEach(function(sceneId) {
+      var scene = scenes[sceneId];
       $log.debug("Verifying scene " + scene.location);
       scene.location = locations[scene.location];
       for (k in scene.dialogs) {
@@ -28,9 +29,8 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
         });
       };
       var sceneName = scene.id + ": " + scene.location.title;
-      var sceneIds = scenes.map(function(x) { return x.id; });
       scene.choices.forEach(function(choice) {
-        if (!(choice.href in sceneIds)) {
+        if (!(choice.href in scenes)) {
           $log.error("Choice '" + choice.text + "' of scene " + sceneName + " references invalid scene id " + choice.href);
         }
       });
@@ -52,10 +52,13 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
     loadedScenes = loadedScenes.map(function(result) {
       return result.data;
     });
-    scenes = [];
-    scenes = scenes.concat(scenes, loadedScenes);
+    scenes = {};
+    loadedScenes.reduce(function(previousValue, currentValue) {
+      previousValue[currentValue.id] = currentValue;
+      return previousValue;
+    }, scenes);
     verifyScenes();
-    $scope.gotoScene(0);
+    $scope.gotoScene("start");
   });
 
   var areConditionsFulfilled = function(condition, state) {
@@ -135,6 +138,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
   };
 
   $scope.gotoScene = function(id, dialogKey) {
+    $log.debug("Switching to scene " + id);
     var scene = scenes[id];
     scene.dialog = scene.dialogs[dialogKey || "default"];
     scene.state = scene.state || {};
