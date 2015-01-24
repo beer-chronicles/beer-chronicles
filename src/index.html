@@ -15,8 +15,12 @@
 	</div>
         <div class="dialog">
           <img src="{{dialogStep.character.image}}">
-          {{dialogStep.character.name}}
-          {{dialogStep.text}}
+	  <div class="characterName">
+            {{dialogStep.character.name}}
+          </div>
+    	  <div class="characterSpeech">
+            {{dialogStep.text}}
+          </div>
         </div>
       </div>
       <ol class="choices" ng-hide="dialogStep">
