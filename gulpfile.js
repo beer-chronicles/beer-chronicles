@@ -11,6 +11,11 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('template', function() {
+  return gulp.src('./src/index.html')
+    .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('server', function() {
   connect.server({
     root: './dist',
@@ -18,6 +23,6 @@ gulp.task('server', function() {
   });
 });
 
-gulp.task('build', ['scripts']);
+gulp.task('build', ['scripts', 'template']);
 
 gulp.task('default', ['build', 'server']);
