@@ -22,7 +22,11 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
     Object.keys(scenes).forEach(function(sceneId) {
       var scene = scenes[sceneId];
       $log.debug("Verifying scene " + scene.location);
+      if (!(scene.location in locations)) {
+        $log.error("Location " + scene.location + " for scene " + sceneId + " is not defined!");
+      }
       scene.location = locations[scene.location];
+
       for (k in scene.dialogs) {
         scene.dialogs[k].forEach(function(step) {
           step.character = characters[step.character];
