@@ -14,9 +14,9 @@
     "image": "/assets/characters/jakob.png",
     "color": "#FF3232"
   },
-  "4": {
-    "name": "4",
-    "image": "/assets/characters/4.png",
+  "tracy": {
+    "name": "Tracy",
+    "image": "/assets/characters/tracy.png",
     "color": "#FFFF32"
   }
 }
