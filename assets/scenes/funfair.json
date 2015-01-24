@@ -1,13 +1,13 @@
 {
-  "id": "brewery",
-  "location": "brewery",
+  "id": "funfair",
+  "location": "funfair",
   "choices": [
     {
       "text": "Drink beer.",
-      "href": "brewery"
+      "href": "funfair"
     }, {
       "text": "Drink more beer",
-      "href": "brewery"
+      "href": "funfair"
     }
   ]
 }
