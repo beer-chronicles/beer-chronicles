@@ -11,14 +11,14 @@
         <h1>{{scene.location.title}}</h1>
         <h2>{{scene.location.description}}</h2>
         <div class="introduction">
-		<p ng-repeat="text in scene.introduction track by $index">{{text}}</p>
-	</div>
+          <p ng-repeat="text in scene.introduction track by $index">{{text}}</p>
+        </div>
         <div class="dialog">
           <img src="{{dialogStep.character.image}}">
-	  <div class="characterName">
+          <div class="characterName">
             {{dialogStep.character.name}}
           </div>
-    	  <div class="characterSpeech">
+          <div class="characterSpeech">
             {{dialogStep.text}}
           </div>
         </div>
