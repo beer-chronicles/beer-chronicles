@@ -9,19 +9,25 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
   var locations;
   var characters;
   var globalState = {};
+  var dialogCounter = 0;
 
   var locationsLoader = $http.get("/assets/locations.json");
   var charactersLoader = $http.get("/assets/characters.json");
-  var sceneLoaders = ["/assets/scenes/apartment.json", "/assets/scenes/brewery.json", "/assets/scenes/gasStation.json", "/assets/scenes/lockUp.json"]
+  var sceneLoaders = ["start", "apartment", "brewery", "gasStation", "lockUp"]
       .map(function(resource) {
-        return $http.get(resource);
+        return $http.get("/assets/scenes/" + resource + ".json");
       });
- 
+
   var verifyScenes = function() {
     Object.keys(scenes).forEach(function(sceneId) {
       var scene = scenes[sceneId];
       $log.debug("Verifying scene " + scene.location);
       scene.location = locations[scene.location];
+      for (k in scene.dialogs) {
+        scene.dialogs[k].forEach(function(step) {
+          step.character = characters[step.character];
+        });
+      };
       var sceneName = scene.id + ": " + scene.location.title;
       scene.choices.forEach(function(choice) {
         if (!(choice.href in scenes)) {
@@ -93,9 +99,9 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
     var countersToChange = changes.counters || [];
     countersToChange.forEach(function(change) {
       if (typeof change.operation == 'undefined')
-        return; 
+        return;
       var counterState = state[change.name] || { "value": 0};
-      state[change.name] = counterState; 
+      state[change.name] = counterState;
       switch (change.operation) {
         case "add":
           counterState.value += change.amount;
@@ -128,13 +134,26 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
     applyStateChanges(choice.local, sceneState);
     applyStateChanges(choice.global, globalState);
     var id = choice.href;
-    $scope.gotoScene(id);
+    $scope.gotoScene(id, choice.dialog || "default");
   };
 
-  $scope.gotoScene = function(id) {
+  $scope.gotoScene = function(id, dialogKey) {
     var scene = scenes[id];
+    scene.dialog = scene.dialogs[dialogKey || "default"];
     scene.state = scene.state || {};
     $scope.scene = scene;
+    dialogCounter = 0;
+    $scope.dialogStep = undefined;
+    $scope.nextDialogStep();
     determineChoices();
   };
+
+  $scope.nextDialogStep = function() {
+    if(dialogCounter < $scope.scene.dialog.length) {
+      $scope.dialogStep = $scope.scene.dialog[dialogCounter];
+      dialogCounter++;
+    } else {
+      $scope.dialogStep = undefined;
+    }
+  }
 }]);

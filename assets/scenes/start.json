@@ -1,0 +1,12 @@
+{
+  "id": "start",
+  "introduction": "This is a test",
+  "location": "black",
+  "choices": [
+    {
+      "text": "Continue",
+      "character": "narrator",
+      "href": 1
+    }
+  ]
+}
