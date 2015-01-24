@@ -18,13 +18,13 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
       });
  
   var verifyScenes = function() {
-    scenes.forEach(function(scene) {
+    Object.keys(scenes).forEach(function(sceneId) {
+      var scene = scenes[sceneId];
       $log.debug("Verifying scene " + scene.location);
       scene.location = locations[scene.location];
       var sceneName = scene.id + ": " + scene.location.title;
-      var sceneIds = scenes.map(function(x) { return x.id; });
       scene.choices.forEach(function(choice) {
-        if (!(choice.href in sceneIds)) {
+        if (!(choice.href in scenes)) {
           $log.error("Choice '" + choice.text + "' of scene " + sceneName + " references invalid scene id " + choice.href);
         }
       });
@@ -46,8 +46,11 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
     loadedScenes = loadedScenes.map(function(result) {
       return result.data;
     });
-    scenes = [];
-    scenes = scenes.concat(scenes, loadedScenes);
+    scenes = {};
+    loadedScenes.reduce(function(previousValue, currentValue) {
+      previousValue[currentValue.id] = currentValue;
+      return previousValue;
+    }, scenes);
     verifyScenes();
     $scope.gotoScene(0);
   });
