@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="/main.css">
   </head>
   <body ng-controller="GameCtrl">
-    <div>{{scene.location}}</div>
+  <div style="background-image: url({{scene.location.backgroundImage}})">
+      <h1>{{scene.location.title}}</h1>
+  </div>
     <ul>
       <li ng-repeat="choice in scene.choices">
         <a href="#" ng-click="gotoScene(choice.href)">{{choice.text}}</a>
