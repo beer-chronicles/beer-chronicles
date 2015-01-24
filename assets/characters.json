@@ -1,18 +1,22 @@
 {
   "karl": {
     "name": "Karl",
-    "image": "/assets/characters/karl.png"
+    "image": "/assets/characters/karl.png",
+	"color": "#6464C8"
   },
   "zoe": {
     "name": "Zoe",
-    "image": "/assets/characters/zoe.png"
+    "image": "/assets/characters/zoe.png",
+	"color": "#C864C8"
   },
   "jakob": {
     "name": "Jakob",
-    "image": "/assets/characters/jakob.png"
+    "image": "/assets/characters/jakob.png",
+	"color": "#FF3232"
   },
   "4": {
     "name": "4",
-    "image": "/assets/characters/4.png"
+    "image": "/assets/characters/4.png",
+	"color": "#FFFF32"
   }
 }
