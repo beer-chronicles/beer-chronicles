@@ -11,12 +11,12 @@
         <h1>{{scene.location.title}}</h1>
         <h2>{{scene.location.description}}</h2>
         <div class="introduction" ng-bind-html="scene.introduction|linebreaks"></div>
-	<div class="dialog" ng-hide="!dialogStep">
+        <div class="dialog" ng-hide="!dialogStep">
           <img src="{{dialogStep.character.image}}">
-	  <div class="characterName">
+          <div class="characterName">
             {{dialogStep.character.name}}
           </div>
-    	  <div class="characterSpeech">
+          <div class="characterSpeech">
             {{dialogStep.text}}
           </div>
 	  <button ng-click="skipDialog()" ng-hide="!developmentMode">Skip dialog</button>
