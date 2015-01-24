@@ -2,20 +2,33 @@
   {
     "id": 0,
     "location": "apartment",
-    "dialog": [
-      {
-        "character": "jakob",
-        "text": "What do we do now!?"
-      },
-      {
-        "character": "Karl",
-        "text": "I have no idea :("
-      }
-    ],
+    "dialogs": {
+      "default": [
+        {
+          "character": "jakob",
+          "text": "What do we do now!?"
+        },
+        {
+          "character": "karl",
+          "text": "I have no idea :("
+        }
+      ],
+      "wait": [
+        {
+          "character": "jakob",
+          "text": "What do we do now!?"
+        },
+        {
+          "character": "karl",
+          "text": "no more waiting i Hope"
+        }
+      ]
+    },
     "choices": [
       {
         "text": "Wait here.",
-        "href": 0
+        "href": 0,
+        "dialog": "wait"
       }, {
         "text": "Gas station.",
         "href": 1
