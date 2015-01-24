@@ -37,6 +37,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
       };
       var sceneName = scene.id + ": " + scene.location.title;
       scene.choices.forEach(function(choice) {
+        choice.character = characters[choice.character];
         if (!(choice.href in scenes)) {
           $log.error("Choice '" + choice.text + "' of scene " + sceneName + " references invalid scene id " + choice.href);
         }
