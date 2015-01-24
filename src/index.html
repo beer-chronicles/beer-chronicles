@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="beerChronicles">
   <head>
     <meta charset="utf-8">
     <title>beer chronicles</title>
     <link rel="stylesheet" href="/main.css">
   </head>
-  <body>
+  <body ng-controller="GameCtrl">
+    <div>{{scene.location}}</div>
+    <ul>
+      <li ng-repeat="choice in scene.choices">
+        {{choice.text}}
+      </li>
+    </ul>
+
     <script src="/app.js"></script>
   </body>
 </html>
