@@ -137,8 +137,6 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', function($http, $scope, $
   };
 
   $scope.nextDialogStep = function() {
-    $log.log(dialogCounter);
-    $log.log($scope.scene);
     if(dialogCounter < $scope.scene.dialog.length) {
       $scope.dialogStep = $scope.scene.dialog[dialogCounter];
       dialogCounter++;
