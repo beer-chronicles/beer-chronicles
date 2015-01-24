@@ -1,37 +1,37 @@
 [
-    {
-        "id": 0,
-        "location": {
-            "backgroundImage": "assets/locations/apartment.jpg",
-            "title": "The apartment"
-        },
-        "choices": [
-        {
-            "text": "Wir gehen Bier holen an der Tanke!",
-            "href": 1
-        }, {
-            "text": "Wir warten hier erstmal.",
-            "href": 0
-        }, {
-            "text": "Wir suchen eine Brauerei.",
-            "href": 2
-        }
-        ]
+  {
+    "id": 0,
+    "location": {
+      "backgroundImage": "assets/locations/apartment.jpg",
+      "title": "The apartment"
     },
-    {
-        "id": 1,
-        "location": {
-            "backgroundImage": "assets/locations/tankstelle.jpg",
-            "title": "Gas station"
-        },
-        "choices": [
-            {
-                "text": "Einbrechen",
-                "href": 1
-            }, {
-                "text": "Klingeln",
-                "href": 2
-            }
-        ]
-    }
+    "choices": [
+      {
+        "text": "Wir gehen Bier holen an der Tanke!",
+        "href": 1
+      }, {
+      "text": "Wir warten hier erstmal.",
+      "href": 0
+      }, {
+      "text": "Wir suchen eine Brauerei.",
+      "href": 2
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "location": {
+      "backgroundImage": "assets/locations/tankstelle.jpg",
+      "title": "Gas station"
+    },
+    "choices": [
+      {
+        "text": "Einbrechen",
+        "href": 1
+      }, {
+      "text": "Klingeln",
+      "href": 2
+      }
+    ]
+  }
 ]
