@@ -17,7 +17,7 @@
       </div>
       <ol class="choices">
         <li ng-repeat="choice in scene.choices | filter: {show:true}">
-          <a href="#" ng-click="onChoiceSelected(choice)">{{choice.text}}</a>
+        <a href="#" ng-click="onChoiceSelected(choice); $event.stopPropagation();">{{choice.text}}</a>
         </li>
       </ol>
     </div>
