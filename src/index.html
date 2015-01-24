@@ -24,7 +24,7 @@
       </div>
       <ol class="choices" ng-hide="dialogStep">
         <li ng-repeat="choice in scene.choices | filter: {show:true}">
-        <a href="#" ng-click="onChoiceSelected(choice); $event.stopPropagation();">{{choice.text}}</a>
+        <a href="#" ng-click="onChoiceSelected(choice); $event.stopPropagation();" style="color:{{choice.character.color}}">{{choice.character.name ? choice.character.name + ": " : ""}}{{choice.text}}</a>
         </li>
       </ol>
     </div>
