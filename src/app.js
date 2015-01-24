@@ -58,7 +58,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
       return previousValue;
     }, scenes);
     verifyScenes();
-    $scope.gotoScene(0);
+    $scope.gotoScene("start");
   });
 
   var areConditionsFulfilled = function(condition, state) {
@@ -138,6 +138,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
   };
 
   $scope.gotoScene = function(id, dialogKey) {
+    $log.debug("Switching to scene " + id);
     var scene = scenes[id];
     scene.dialog = scene.dialogs[dialogKey || "default"];
     scene.state = scene.state || {};
