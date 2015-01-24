@@ -10,11 +10,11 @@
       <div class="content">
         <h1>{{scene.location.title}}</h1>
       </div>
-      <ul class="choices">
-	  <li ng-repeat="choice in scene.choices | filter: {show:true}">
+      <ol class="choices">
+        <li ng-repeat="choice in scene.choices | filter: {show:true}">
           <a href="#" ng-click="onChoiceSelected(choice)">{{choice.text}}</a>
         </li>
-      </ul>
+      </ol>
     </div>
     <script src="/app.js"></script>
   </body>

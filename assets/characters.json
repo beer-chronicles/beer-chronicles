@@ -1,0 +1,18 @@
+{
+  "karl": {
+    "name": "Karl",
+    "image": "/assets/characters/karl.png"
+  },
+  "zoe": {
+    "name": "Zoe",
+    "image": "/assets/characters/zoe.png"
+  },
+  "jakob": {
+    "name": "Jakob",
+    "image": "/assets/characters/jakob.png"
+  },
+  "4": {
+    "name": "4",
+    "image": "/assets/characters/4.png"
+  }
+}

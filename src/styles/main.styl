@@ -3,9 +3,13 @@
 
 html, body
   background-color: white;
+  font-family: arial
   margin: 0
   padding: 0
   height: 100%
+
+h1
+  font-size: 3em
 
 .location
   background-position: 50%
@@ -16,10 +20,23 @@ html, body
   width: 100%
   .content
     padding: 30px
-  ul.choices
+  .choices
     background-color: rgba(0, 0, 0, .5)
     bottom: 0
     height: 200px
     margin: 0
     position: fixed
+    padding: 20px 40px
     width: 100%
+    li
+      padding: 5px
+      transition: all 0.3s
+      color: #FFF
+      a, a:visited
+        transition: all 0.3s
+        color: #CCC
+        font-weight: bold
+        text-decoration: none
+        &:hover, &:focus
+          color: #FFF
+          text-shadow: 0 0 5px #CCC
