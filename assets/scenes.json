@@ -20,13 +20,22 @@
 	"href": 0,
 	"local": {
 	  "unset": ["bottleOfWater"],
-	  "requires": ["bottleOfWater"]
+	  "requires": ["bottleOfWater"],
+	  "counters": [
+            { "name": "drankWaterTimes",
+              "operation": "add",
+              "amount": 1}
+          ]
 	}
       }, {
 	"text": "Fill up bottle of water",
 	"href": 0,
 	"local": {
-	  "set": ["bottleOfWater"]
+	  "set": ["bottleOfWater"],
+          "counters": [
+            { "name": "drankWaterTimes",
+              "lessThan": 3}
+          ]
 	}
       }
     ]

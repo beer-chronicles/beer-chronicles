@@ -42,6 +42,15 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', function($http, $scope, $
     result = result && requires.every(function(localFlag) {
       return (state[localFlag] || false);
     });
+    result = result && condition.counters.every(function(counter) {
+      var counterState = state[counter.name];
+      var counterValue = (typeof counterState != 'undefined' ? state[counter.name].value : 0);
+      var result = true;
+      result = result && (typeof counter.lessThan == 'undefined' || counterValue < counter.lessThan);
+      result = result && (typeof counter.greaterThan == 'undefined' || counterValue > counter.greaterThan);
+      result = result && (typeof counter.equals == 'undefined' || equals === counter.equals);
+      return result;
+    });
     return result;
   };
 
@@ -55,6 +64,28 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', function($http, $scope, $
     var flagsToRemove= changes.unset || [];
     flagsToRemove.forEach(function(localFlag) {
       delete state[localFlag];
+    });
+    var countersToChange = changes.counters || [];
+    countersToChange.forEach(function(change) {
+      if (typeof change.operation == 'undefined')
+        return; 
+      var counterState = state[change.name] || { "value": 0};
+      state[change.name] = counterState; 
+      switch (change.operation) {
+        case "add":
+          counterState.value += change.amount;
+          break;
+        case "sub":
+          counterState.value -= change.amount;
+          break;
+        case "set":
+          counterState.value = change.amount;
+          break;
+        default:
+          $log.error("UNSUPPORTED COUNTER OPERATION: " + change.operation);
+          break;
+      }
+      $log.debug("New counter value for " + change.name + ": " + counterState.value);
     });
   };
 
