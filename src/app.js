@@ -145,7 +145,8 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
     $log.debug("Switching to scene " + id);
     var scene = scenes[id];
     dialogKey = dialogKey || "default";
-    if(scenes.hasOwnProperty("dialogs") && scene.dialogs.hasOwnProperty(dialogKey)) {
+
+    if(scene.hasOwnProperty("dialogs") && scene.dialogs.hasOwnProperty(dialogKey)) {
       scene.dialog = scene.dialogs[dialogKey];
     } else {
       scene.dialog = [];
