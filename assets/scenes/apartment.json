@@ -78,7 +78,7 @@
       "dialog": "basement",
       "local": {
         "deniedBy": ["basement"],
-        "set": ["basement"]
+        "set": ["basement", "daemonScroll"]
       }
     }, {
       "text": "I've seen a bottle falling down and rolling below the sofa. With enough skill we must be able to rescue it.",
@@ -87,7 +87,7 @@
       "dialog": "belowSofa",
       "local": {
         "deniedBy": ["sofa"],
-        "set": ["sofa", "daemonScroll"]
+        "set": ["sofa"]
       }
     }, {
       "text": "Some bottle fell off... lick off those drops...",
