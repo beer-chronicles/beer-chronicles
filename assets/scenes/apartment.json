@@ -18,7 +18,7 @@
       {"character": "tracy", "text": "You got munchies again, we know already."},
       {"character": "karl", "text": "She told us this exactly five times already."}
     ]
-  ],
+  },
   "choices": [
     {
       "text": "In the fridge is always beer. Let's have a look!",
