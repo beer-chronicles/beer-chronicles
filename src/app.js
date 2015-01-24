@@ -12,6 +12,8 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
   var globalState = {};
   var dialogCounter = 0;
 
+  $scope.developmentMode=true;
+
   var locationsLoader = $http.get("/assets/locations.json");
   var charactersLoader = $http.get("/assets/characters.json");
   var sceneLoaders = ["start", "apartment", "brewery", "gasStation", "lockUp"]
@@ -169,6 +171,12 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
       dialogCounter++;
     } else {
       $scope.dialogStep = undefined;
+    }
+  }
+
+  $scope.skipDialog = function() {
+    while (typeof $scope.dialogStep != 'undefined') {
+      $scope.nextDialogStep();
     }
   }
 }]);

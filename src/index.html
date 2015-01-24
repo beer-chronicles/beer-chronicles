@@ -19,6 +19,7 @@
     	  <div class="characterSpeech">
             {{dialogStep.text}}
           </div>
+	  <button ng-click="skipDialog()" ng-hide="!developmentMode">Skip dialog</button>
         </div>
       </div>
       <ol class="choices" ng-hide="dialogStep">
