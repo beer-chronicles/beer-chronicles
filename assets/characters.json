@@ -33,5 +33,10 @@
     "name": "Policeman 3",
     "image": "",
     "color": "#EEFFDD"
+  },
+  "demon": {
+    "name": "????",
+    "image": "/assets/characters/demon.png",
+    "color": "#FF0000"
   }
 }
