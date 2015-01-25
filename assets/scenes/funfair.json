@@ -3,19 +3,22 @@
   "location": "funfair",
   "dialogs": {
     "default": [
-      {"character": "narrator", "text": "here our travelers find a place where they can find beer..."},
+      {"character": "doorkeeper", "text": "here our travelers find a place where they can find beer..."},
       {"character": "karl", "text": "finally, we obtain the liquor of our dreams, the ambrosia we all leeched for"},
-      {"character": "narrator", "text": "Sorry buds, but you're clearly too drunk to go here, go home and get some sleep!"},
+      {"character": "doorkeeper", "text": "Sorry buds, but you're clearly too drunk to go here, go home and get some sleep!"},
       {"character": "tracy", "text": "Nooo, too drunk is impossible just let us in!"},
-      {"character": "narrator", "text": "It is very possible, and you're the best example. You'd need a demon make me let me in"}
+      {"character": "doorkeeper", "text": "It is very possible, and you're the best example. You'd need a demon make me let me in"}
     ],
     "begging": [
       {"character": "tracy", "text": "But you have to let us innn!"},
-      {"character": "narrator", "text": "no, I don't. No demons - no you in this tent. And we all know there is nothing like a demon"}
+      {"character": "doorkeeper", "text": "no, I don't. No demons - no you in this tent. And we all know there is nothing like a demon"}
     ],
     "demon": [
-      {"character": "tracy", "text": "But you have to let us innn!"},
-      {"character": "narrator", "text": "no, I don't. No demons - no you in this tent. And we all know there is nothing like a demon"}
+      {"character": "zoe", "text": "<throws the little demon at the doorkeeper>"},
+      {"character": "doorkeeper", "text": "NO! what?"},
+      {"character": "doorkeeper", "text": "What have you done???"},
+      {"character": "doorkeeper", "text": "<runs away>"},
+      {"character": "tracy", "text": "that was easy <enters the tent | the others follow her>"}
     ]
   },
   "choices": [
@@ -26,7 +29,10 @@
     }, {
       "text": "Let's just drag the demon on this guy and then he runs away...",
       "dialog": "demon",
-      "local": {
+      "": {
+        "requires": ["demon"]
+      },
+      "gobal": {
         "requires": ["demon"]
       }
     }, {
