@@ -30,6 +30,21 @@
       {"character": "jakob", "text": "...  but her grandma is ..."},
       {"character": "tracy", "text": "Who cares, are you coming or not?"},
       {"character": "jakob", "text": "..."}
+    ],
+    "demon": [
+      {"character": "karl", "text": "I'm back."},
+      {"character": "zoe", "text": "WHAT"},
+      {"character": "jakob", "text": "IS"},
+      {"character": "tracy", "text": "THAT"},
+      {"character": "demon", "text": "narg?"},
+      {"character": "karl", "text": "Well, I met members of the so called \"Hobbyist demon summoning club\""},
+      {"character": "karl", "text": "They tried to summon a demon."},
+      {"character": "karl", "text": "I was able to help them out with the old book I found in Tracy's apartment."},
+      {"character": "jakob", "text": "Looks like it worked."},
+      {"character": "zoe", "text": "Can we keep him?"},
+      {"character": "tracy", "text": "And where are the club members?"},
+      {"character": "karl", "text": "He ate them all."},
+      {"character": "demon", "text": "Boooeerks..."}
     ]
   },
   "choices": [
@@ -74,8 +89,10 @@
       "href": "graveyard",
       "character": "karl"
     }, {
-      "text": "DEMOOONS!",
+      "text": "Scout the graveyard <using misterious item obtained from Tracy's basement>",
       "href": "graveyard",
+      "character": "karl",
+      "dialog": "demon",
       "global": {
         "requires": ["demonScroll"]
       }
