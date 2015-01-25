@@ -41,8 +41,12 @@
       "character": "karl",
       "href": "lockup",
       "local": {
-        "set": ["rollDice"]
-        
+        "set": ["rollDice"],
+        "counters": [
+	        { "name": "diceRoll",
+            "operation": "rnd",
+            "amount" : 2 } 
+	      ]
       }
     }, {
       "text": "We rooled a pair! we can get out!",
@@ -52,7 +56,11 @@
         "requires": ["rollDice"],
         "set": ["getFree"],
         "unset": ["rollDice"],
-        "chance": 0.15
+        "counters": [
+          { "name" : "diceRoll",
+            "equals": 1
+          }
+        ]
       }
     }, {
       "text": "Ew, no pair...",
@@ -61,7 +69,12 @@
       "local": {
         "requires": ["rollDice"],
         "deniedBy": ["getFree"],
-        "unset": ["rollDice"]
+        "unset": ["rollDice"],
+        "counters": [
+          { "name" : "diceRoll",
+            "equals": 0
+          }
+        ]
       }
     }
   ]

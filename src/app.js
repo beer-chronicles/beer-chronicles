@@ -88,7 +88,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
         var result = true;
         result = result && (typeof counter.lessThan == 'undefined' || counterValue < counter.lessThan);
         result = result && (typeof counter.greaterThan == 'undefined' || counterValue > counter.greaterThan);
-        result = result && (typeof counter.equals == 'undefined' || equals === counter.equals);
+        result = result && (typeof counter.equals == 'undefined' || counterValue === counter.equals);
         return result;
       });
     }
@@ -125,6 +125,9 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
         case "set":
           counterState.value = change.amount;
           break;
+	case "rnd":
+	  counterState.value = Math.floor(Math.random() * change.amount);
+	  break;
         default:
           $log.error("UNSUPPORTED COUNTER OPERATION: " + change.operation);
           break;
