@@ -6,6 +6,8 @@
       {"character": "jakob", "text": "Welcome to my awesome room."},
       {"character": "tracy", "text": "Amazing. All those pictures and trophies. I love football."}
     ],
+    "apartment": [],
+    "gasStation": [],
     "hiddenStorage": [
       {"character": "jakob", "text": "Just like I said. All the good stuff for my buddies. All the stuff you could imagine."},
       {"character": "karl", "text": "Still no, not a single beer!"},
@@ -241,6 +243,32 @@
         ],
         "set": [
           "entertainSweety"
+        ]
+      }
+    }, {
+      "text": "Let's move on buddies. I know a old buddy from the gas station nearby",
+      "character": "jakob",
+      "href": "gasStation",
+      "dialog": "gasStation",
+      "local": {
+        "counters": [
+          {
+            "name": "choiceCounter",
+            "greaterThan": 6
+          }
+        ]
+      }
+    }, {
+      "text": "I want back home. It's soo boring here.",
+      "character": "tracy",
+      "href": "apartment",
+      "dialog": "apartment",
+      "local": {
+        "counters": [
+          {
+            "name": "choiceCounter",
+            "greaterThan": 7
+          }
         ]
       }
     }
