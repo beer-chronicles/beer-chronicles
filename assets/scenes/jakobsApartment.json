@@ -14,7 +14,12 @@
       {"character": "jakob", "text": "Yeah, that's me..."},
       {"character": "karl", "text": "I do not want to interrupt your conversation, but might we return to beer concerning the topic."}
     ],
-    "minibar": [],
+    "minibar": [
+      {"character": "jakob", "text": "Here all the good liquors. Feel like at home, buddies."},
+      {"character": "tracy", "text": "Cool! So many choices for drinks."},
+      {"character": "karl", "text": "We should just make ourself aware of the fact that none of all those liquors is beer in fact."},
+      {"character": "tracy", "text": "Their useless! We need beer..."}
+    ],
     "coldBeer": [
       {"character": "jakob", "text": "Dude! Sorry, but this is my fridge."},
       {"character": "karl", "text": "But it might be containing beer for all of us."},
