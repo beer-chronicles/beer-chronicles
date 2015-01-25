@@ -1,0 +1,25 @@
+{
+  "id": "jakobsApartment",
+  "location": "jakobsApartment",
+  "dialogs": {
+    "default": [
+      {"character": "jakob", "text": "Welcome to my awesome home."}
+    ],
+    "hiddenStorage": [
+      {"character": "jakob", "text": "Well guys, I got here some good stuff, some very good stuff!"},
+      {"character": "karl", "text": "But this does not provide us any help with our miserable lack of beer."}
+    ]
+  },
+  "choices": [
+    {
+      "text": "I got a lot of hidden storages for good stuff.",
+      "character": "jakob",
+      "href": "jakobsApartment",
+      "dialog": "hiddenStorage",
+      "local": {
+        "deniedBy": ["hiddenStorage"],
+        "set": ["hiddenStorage"]
+      }
+    }
+  ]
+}
