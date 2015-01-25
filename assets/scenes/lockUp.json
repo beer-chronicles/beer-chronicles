@@ -6,17 +6,40 @@
       {"character": "zoe", "text": "it's... silent in here, I like it :)"},
       {"character": "tracy", "text": "I can't believe this happened, this sucks!"},
       {"character": "jakob", "text": "nothing can stop me from getting beer, we have to break out!"},
-      {"character": "karl", "text": "I believe there is no way how we can break free from confinement now"}
+      {"character": "karl", "text": "I believe there is no way how we can break free from confinement now."},
+      {"character": "karl", "text": "... But look what I got here: My T-900 original Dice pair! We won't get bored at least."},
+      {"character": "tracy", "text": "Please ... shoot ... me!"}
     ],
     "cellBars": [
       {"character": "narrator", "text": "<joseph tries to bend the cell bars but whatever what he does, it doesn't result in any visual changes>"},
       {"character": "jakob", "text": "hngggg... hmpf... arrrgh..."},
       {"character": "jakob", "text": "It doesn't work??? how is this possible?"}
+    ],
+    "rollDice": [
+      {"character": "tracy", "text": "You little nerd, this ain't some kind of game, IT'S THE JAIL!!"},
+      {"character": "karl", "text": "Beware the true power of this armed and fully operational dice!"}
+    ],
+    "higherPower": [
+      {"character": "zoe", "text": "Oh great power above!"},
+      {"character": "narrator", "text": "<Thunder is grumbling outside>"},
+      {"character": "zoe", "text": "I call upon thee to set us free!"},
+      {"character": "tracy", "text": "Poser."},
+      {"character": "zoe", "text": "Sissy."},
+      {"character": "policeman1", "text": "WHO DARES TO DISTURB ME! <snickering outside>"},
+      {"character": "policeman1", "text": "IF I SHOULD GRANT YOU YOUR WISH, FIRST GRANT ME MINE!"},
+      {"character": "karl", "text": "Please state your wish then!"},
+      {"character": "policeman1", "text": "BRING ME A SHRUBBERY!"},
+      {"character": "policeman2", "text": "No, let them promise their first born."},
+      {"character": "policeman3", "text": "The dishes! Let them do the dishes!"},
+      {"character": "policeman2", "text": "Just because it's your turn..."},
+      {"character": "policeman1", "text": "SILENCE! BRING ... ME ... A ... SHRUBBERY!"},
+      {"character": "tracy", "text": "Oh come on, we heard you alright... just leave us alone!"},
+      {"character": "zoe", "text": "As you command... <starts looking for a shrubbery>"}
     ]
   },
   "choices": [
     {
-      "text": "let's ask one of these blue dressed men for a bread, I'm still hungry",
+      "text": "Let's ask one of these blue dressed men for a bread, I'm still hungry",
       "character": "zoe",
       "href": "lockup",
       "local": {
@@ -30,18 +53,20 @@
         "unset": ["rollDice"]
       }
     }, {
-      "text": "you're all crazy, just ask one of our cellmates for alcohol, and we'll survive until we get the f*** out of here",
+      "text": "You're all crazy, just ask one of our cellmates for alcohol, and we'll survive until we get the f*** out of here",
       "character": "tracy",
       "href": "lockup",
       "local": {
         "unset": ["rollDice"]
       }
     }, {
-      "text": "We can roll die, when we roll a pair we get free",
+      "text": "We can roll dice, when we roll a pair we get free",
       "character": "karl",
       "href": "lockup",
+      "dialog": "rollDice",
       "local": {
         "set": ["rollDice"],
+        "deniedBy": ["rollDice"],
         "counters": [
 	        { "name": "diceRoll",
             "operation": "rnd",
@@ -49,12 +74,10 @@
 	      ]
       }
     }, {
-      "text": "We rooled a pair! we can get out!",
-      "character": "karl",
-      "href": "graveyard",
+      "text": "Unbelievable, we rolled a pair and the door unlock, let's get outta here!",
+      "character": "tracy",
       "local": {
         "requires": ["rollDice"],
-        "set": ["getFree"],
         "unset": ["rollDice"],
         "counters": [
           { "name" : "diceRoll",
@@ -63,12 +86,10 @@
         ]
       }
     }, {
-      "text": "Ew, no pair...",
+      "text": "Ew, no pair... but logic tells us, we should roll again!",
       "character": "karl",
-      "href": "lockup",
       "local": {
         "requires": ["rollDice"],
-        "deniedBy": ["getFree"],
         "unset": ["rollDice"],
         "counters": [
           { "name" : "diceRoll",
@@ -76,6 +97,15 @@
           }
         ]
       }
+    }, {
+      "text": "Call upon a higher power!!",
+      "character": "zoe",
+      "dialog": "higherPower",
+      "local": {
+        "deniedBy": ["higherPower"],
+        "set": ["higherPower"]
+      }
+
     }
   ]
 }
