@@ -180,4 +180,18 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
       $scope.nextDialogStep();
     }
   }
+
+  $scope.goFullScreen = function() {
+    var elem = document.getElementById("body");
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+    }
+    $scope.fullScreen = true;
+  };
 }]);
