@@ -94,7 +94,8 @@
       "character": "karl",
       "dialog": "demon",
       "global": {
-        "requires": ["demonScroll"]
+        "requires": ["demonScroll"],
+        "unset": ["demonScroll"]
       }
     }
   ]
