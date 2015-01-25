@@ -192,13 +192,6 @@
             "greaterThan": 4}
         ]
       }
-    }, {
-      "text": "Random test",
-      "character": "karl",
-      "href": "apartment",
-      "local": {
-        "chance": 0.8
-      }
     }
   ]
 }
