@@ -1,21 +1,33 @@
 {
   "id": "funfair",
   "location": "funfair",
+  "dialogs": {
+    "default": [
+      {"character": "narrator", "text": "here our travelers find a place where they can find beer..."},
+      {"character": "karl", "text": "finally, we obtain the liquor of our dreams, the ambrosia we all leeched for"},
+      {"character": "narrator", "text": "Sorry buds, but you're clearly too drunk to go here, go home and get some sleep!"},
+      {"character": "tracy", "text": "Nooo, too drunk is impossible just let us in!"},
+      {"character": "narrator", "text": "It is very possible, and you're the best example. You'd need a demon make me let me in"}
+    ],
+    "begging": [
+      {"character": "tracy", "text": "But you have to let us innn!"},
+      {"character": "narrator", "text": "no, I don't. No demons - no you in this tent. And we all know there is nothing like a demon"}
+    ],
+    "demon": [
+      {"character": "tracy", "text": "But you have to let us innn!"},
+      {"character": "narrator", "text": "no, I don't. No demons - no you in this tent. And we all know there is nothing like a demon"}
+    ]
+  },
   "choices": [
     {
-      "text": "Drink beer.",
-      "href": "funfair"
+      "text": "but you haaave to let us in!",
+      "dialog": "begging",
+      "character": "tracy"
     }, {
-      "text": "Drink more beer",
-      "href": "funfair"
-    }, {
-      "text": "Drink even more beer",
-      "href": "funfair",
+      "text": "Let's just drag the demon on this guy and then he runs away...",
+      "dialog": "demon",
       "local": {
-        "counters": [
-          { "name": "choiceCounter",
-            "greaterThan": 3}
-        ]
+        "requires": ["demon"]
       }
     }, {
       "text": "Drink the most beer",

@@ -1,33 +1,80 @@
 {
   "id": "graveyard",
   "location": "graveyard",
+  "dialogs": {
+    "default": [
+      {"character": "tracy", "text": "How did we end up here?!"},
+      {"character": "tracy", "text": "This place is creepy"},
+      {"character": "zoe", "text": "I can almost feel the presence of my grandma~~"},
+      {"character": "jakob", "text": "Your granny is still alive..."},
+      {"character": "zoe", "text": "Oh, I guess I just feel hungry then."},
+      {"character": "karl", "text": "I recommend we split up and look for a way to get out of here."}
+    ],
+    "zoe1": [
+      {"character": "tracy", "text": "Where have you been so long?"},
+      {"character": "zoe", "text": "I met the spirit of my grandma and we talked about the meaning of life~~"},
+      {"character": "jakob", "text": "Your gradma is still alive!!!"}
+    ],
+    "zoe2": [
+      {"character": "tracy", "text": "What took you so long this time?"},
+      {"character": "zoe", "text": "I met grandma's spirit again and she lectured me about the consequences of drug abuse."},
+      {"character": "jakob", "text": "Your grandma is STILL alive!!!"}
+    ],
+    "zoe3": [
+      {"character": "karl", "text": "Welcome back."},
+      {"character": "zoe", "text": "Hey, I met grandma again ..."},
+      {"character": "jakob", "text": "YOUR GRANDMA ..."},
+      {"character": "zoe", "text": ".. she told me we could use the funeral car at the other end of the graveyard, the keys are in the ignition."},
+      {"character": "jakob", "text": "... !?!?!?!?!"},
+      {"character": "karl", "text": "That sounds like a possible solution."},
+      {"character": "jakob", "text": "...  but her grandma is ..."},
+      {"character": "tracy", "text": "Who cares, are you coming or not?"},
+      {"character": "jakob", "text": "..."}
+    ]
+  },
   "choices": [
     {
-      "text": "Drink beer.",
-      "href": "graveyard"
-    }, {
-      "text": "Drink more beer",
-      "href": "graveyard"
-    }, {
-      "text": "Drink even more beer",
+      "text": "Scout the graveyard.",
       "href": "graveyard",
+      "character": "jakob"
+    }, {
+      "text": "Scout the graveyard.",
+      "href": "graveyard",
+      "character": "tracy"
+    }, {
+      "text": "Scout the graveyard.",
+      "href": "graveyard",
+      "character": "zoe",
+      "dialog": "zoe1",
       "local": {
-        "counters": [
-          { "name": "choiceCounter",
-            "greaterThan": 3}
-        ]
+        "set": ["zoe1"],
+        "deniedBy": ["zoe1"]
       }
     }, {
-      "text": "Drink the most beer",
+      "text": "Scout the graveyard.",
       "href": "graveyard",
+      "character": "zoe",
+      "dialog": "zoe2",
       "local": {
-        "counters": [
-          { "name": "choiceCounter",
-            "greaterThan": 5}
-        ]
+        "set": ["zoe2"],
+        "requires": ["zoe1"],
+        "deniedBy": ["zoe2"]
       }
     }, {
-    "text": "DEMOOONS!",
+      "text": "Scout the graveyard.",
+      "href": "graveyard",
+      "character": "zoe",
+      "dialog": "zoe3",
+        "local": {
+        "set": ["zoe3"],
+        "requires": ["zoe2"]
+      }
+    }, {
+      "text": "Scout the graveyard.",
+      "href": "graveyard",
+      "character": "karl"
+    }, {
+      "text": "DEMOOONS!",
       "href": "graveyard",
       "global": {
         "requires": ["demonScroll"]
