@@ -1,13 +1,32 @@
 {
   "id": "credits",
-  "introduction": "Once upon a time four dudes were having a great time together. They all gathered - like they tend to do from time to time - at Tracy's apartment. Today we join them on one of those so joyful evenings. Therefore all of them had already a few - or you could honestly say a few more - drinks. Precisely we talk about beers now. Because this must most obviously be the major reason for the pleasantness of those evenings. This time all went along as regular, until...\n...until there was no beer...",
+  "introduction": "You're done! For now, you might want to try another path!",
   "location": "backgroundBlack",
-  "dialogs": {"default": []},
+  "dialogs": {"default": [
+    {"character": "tracy", "text": "Thanks for playing our game, we had a great time hacking this together in just 48h ours!"},
+    {"character": "zoe", "text": "No beer or weed was consumed making this game (sadly)."},
+    {"character": "jakob", "text": "And now, the credits!"},
+    {"character": "karl", "text": "Art department:"},
+    {"character": "tracy", "text": "Giuliopurino"},
+    {"character": "tracy", "text": "SockenSarah"},
+    {"character": "karl", "text": "Story"},
+    {"character": "zoe", "text": "Ronja"},
+    {"character": "zoe", "text": "noxan"},
+    {"character": "zoe", "text": "Bytekeeper"},
+    {"character": "zoe", "text": "SockenSarah"},
+    {"character": "zoe", "text": "Giuliopurino"},
+    {"character": "karl", "text": "Coding department"},
+    {"character": "jakob", "text": "akuryou"},
+    {"character": "jakob", "text": "Bytekeeper"},
+    {"character": "jakob", "text": "noxan"}
+  ],
+  "empty": []},
   "choices": [
     {
-      "text": "Continue",
+      "text": "Please hit F5 to restart and try another path!",
       "character": "narrator",
-      "href": "apartment"
+      "href": "credits",
+      "dialog": "empty"
     }
   ]
 }
