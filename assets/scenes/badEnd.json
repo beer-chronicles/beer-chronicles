@@ -1,0 +1,20 @@
+{
+  "id": "badEnd",
+  "location": "backgroundBlack",
+  "dialogs": {"default": [
+    {"character": "tracy", "text": "Oh great, I wanted to party and now this..."},
+    {"character": "zoe", "text": "T'is bad, my weed is empty..."},
+    {"character": "jakob", "text": "What..."},
+    {"character": "karl", "text": "... did ..."},
+    {"character": "tracy", "text": "... we ..."},
+    {"character": "zoe", "text": "... do ..."},
+    {"character": "jakob", "text": "wrong?"}
+  ]},
+  "choices": [
+    {
+      "text": "Continue",
+      "character": "narrator",
+      "href": "credits"
+    }
+  ]
+}
