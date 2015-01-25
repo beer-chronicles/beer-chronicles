@@ -30,7 +30,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('template', function() {
-  return gulp.src('./src/index.html')
+  return gulp.src('./src/*.html')
     .pipe(plumber())
     .pipe(gulp.dest(paths.dest))
     .pipe(connect.reload());
