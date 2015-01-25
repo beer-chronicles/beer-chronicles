@@ -28,7 +28,7 @@
     "title": "Funfair"
   },
   "graveyard": {
-    "backgroundImage": "/assets/images/locations/gas_station.jpg",
+    "backgroundImage": "/assets/images/locations/graveyard.png",
     "title": "Graveyard",
     "description": "A place of silence, peace and occasional zombie encounters"
   }
