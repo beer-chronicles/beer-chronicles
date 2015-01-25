@@ -66,7 +66,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
       return previousValue;
     }, scenes);
     verifyScenes();
-    $scope.gotoScene("start");
+    $scope.gotoScene("lockup");
   });
 
   var areConditionsFulfilled = function(condition, state) {
@@ -152,7 +152,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
     choiceCounter.value++;
     applyStateChanges(choice.local, sceneState);
     applyStateChanges(choice.global, globalState);
-    var id = choice.href;
+    var id = choice.href || $scope.scene.id;
     $scope.gotoScene(id, choice.dialog || "default");
   };
 
