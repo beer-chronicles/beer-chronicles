@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="beerChronicles">
+  <head>
+    <meta charset="utf-8">
+    <title>beer chronicles</title>
+    <link rel="stylesheet" href="/main.css">
+  </head>
+  <body ng-controller="GameCtrl" id="body">
+    <div class="location" style="background-color: {{scene.location.backgroundColor}}; background-image: url('{{scene.location.backgroundImage}}');" ng-click="nextDialogStep()">
+      <div class="content">
+        <h1>{{scene.location.title}}</h1>
+        <h2>{{scene.location.description}}</h2>
+        <div class="introduction" ng-bind-html="scene.introduction|linebreaks"></div>
+      </div>
+      <div class="dialog" ng-hide="!dialogStep">
+        <div class="avatar" style="background-image: url('{{dialogStep.character.image}}')"></div>
+        <div class="characterSpeech">
+          <strong>
+            {{dialogStep.character.name}}
+          </strong><br />
+          {{dialogStep.text}}
+        </div>
+        <button ng-click="skipDialog()" ng-hide="!developmentMode">Skip dialog</button>
+      </div>
+      <ol class="choices" ng-hide="dialogStep">
+        <li ng-repeat="choice in scene.choices | filter: {show:true}">
+        <a href="#" ng-click="onChoiceSelected(choice); $event.stopPropagation();" style="color:{{choice.character.color}}">{{choice.character.name ? choice.character.name + ": " : ""}}{{choice.text}}</a>
+        </li>
+      </ol>
+    </div>
+    <a ng-click="goFullScreen()" class="fullscreen" ng-hide="fullScreen"></a>
+    <audio autoplay loop>
+      <source src="/assets/sounds/slow-ska-game-loop.mp3">
+    </audio>
+    <script src="/app.js"></script>
+  </body>
+</html>
