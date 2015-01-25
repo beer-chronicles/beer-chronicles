@@ -48,17 +48,32 @@
     ],
     "karl": [
       {"character": "karl", "text": "I did not find anything."}
+    ],
+    "jakob": [
+      {"character": "jakob", "text": "Nothing but zombies."}
+    ],
+    "tracy": [
+      {"character": "tracy", "text": "This place is so dirty, I will ruin my shoes. I stay here."}
     ]
+
   },
   "choices": [
     {
       "text": "Scout the graveyard.",
       "href": "graveyard",
-      "character": "jakob"
+      "character": "jakob",
+      "dialog": "jakob",
+      "local": {
+        "deniedBy": ["car"]
+      }
     }, {
       "text": "Scout the graveyard.",
       "href": "graveyard",
-      "character": "tracy"
+      "character": "tracy",
+      "dialog": "tracy",
+      "local": {
+        "deniedBy": ["car"]
+      }
     }, {
       "text": "Scout the graveyard.",
       "href": "graveyard",
