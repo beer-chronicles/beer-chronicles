@@ -6,7 +6,11 @@
       {"character": "jakob", "text": "Welcome to my awesome room."},
       {"character": "tracy", "text": "Amazing. All those pictures and trophies. I love football."}
     ],
-    "hiddenStorage": [],
+    "hiddenStorage": [
+      {"character": "jakob", "text": "Just like I said. All the good stuff for my buddies. All the stuff you could imagine."},
+      {"character": "karl", "text": "Still no, not a single beer!"},
+      {"character": "zoe", "text": "... good stuff?"}
+    ],
     "trophies": [
       {"character": "tracy", "text": "Did you win all those trophies yourself, Jakob?"},
       {"character": "jakob", "text": "Yeah, I got honored several times. Best player and stuff like that."},
@@ -28,13 +32,39 @@
       {"character": "zoe", "text": "Peace!"}
     ],
     "goodStuff": [
+      {"character": "narrator", "text": "Zoe passes even farer away from her buddies."},
+      {"character": "zoe", "text": "It better now. I finally can sence some..."}
     ],
-    "emptyRooms": [],
-    "spiritSquirrel": [],
-    "treasureChest": [],
-    "lookAround": [],
-    "feelHunger": [],
-    "entertainSweety": []
+    "emptyRooms": [
+      {"character": "narrator", "text": "Zoe tries to focus on something."},
+      {"character": "zoe", "text": "..."},
+      {"character": "tracy", "text": "Zoe? Oh, sweety, please don't fall asleep now. You'll miss the party!"}
+    ],
+    "spiritSquirrel": [
+      {"character": "zoe", "text": "Peace, my friend..."},
+      {"character": "squirrel", "text": "F***, off..."}
+    ],
+    "treasureChest": [
+      {"character": "karl", "text": "I made an interesting discovery here. This chest looks like it might contain some beer for us."},
+      {"character": "jakob", "text": "Dude! Where did you get this one from?! Just put it back right now!"}
+    ],
+    "lookAround": [
+      {"character": "tracy", "text": "There must some beer around. And I'm even more interested what else I might find."},
+      {"character": "jakob", "text": "Just stay here, I got it all here..."},
+      {"character": "tracy", "text": "What's behind this door?"},
+      {"character": "jakob", "text": "That is my bedroom..."},
+      {"character": "karl", "text": "Please. The topic is where to get beer!"}
+    ],
+    "feelHunger": [
+      {"character": "zoe", "text": "Hungry..."},
+      {"character": "tracy", "text": "Sweety, not again... we know it."},
+      {"character": "karl", "text": "You keep asking so often that I almost lost track of it."}
+    ],
+    "entertainSweety": [
+      {"character": "tracy", "text": "It is soooo soooo boring..."},
+      {"character": "jakob", "text": "But you got all the cool guys around you, darling."},
+      {"character": "karl", "text": "We should focus on our major task on finding beer."}
+    ]
   },
   "choices": [
     {
