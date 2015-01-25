@@ -132,6 +132,12 @@
       "local": {
         "requires": ["car"]
       }
+    }, {
+      "text": "Just drive",
+      "href": "funfair",
+      "local": {
+        "requires": ["car"]
+      }
     }
   ]
 }
