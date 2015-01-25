@@ -1,24 +1,14 @@
 {
   "id": "lockup",
   "location": "lockup",
-  "dialog": [
-    {
-      "character": "zoe",
-      "text": "it's... silent in here, I like it :)"
-    },
-    {
-      "character": "tracy",
-      "text": "I can't believe this happened, this sucks!"
-    },
-    {
-      "character": "jakob",
-      "text": "nothing can stop me from getting beer, we have to break out!"
-    },
-    {
-      "character": "karl",
-      "text": "I believe there is no way how we can break free from confinement now"
-    }
-  ],
+  "dialogs": {
+    "default": [
+      {"character": "zoe", "text": "it's... silent in here, I like it :)"},
+      {"character": "tracy", "text": "I can't believe this happened, this sucks!"},
+      {"character": "jakob", "text": "nothing can stop me from getting beer, we have to break out!"},
+      {"character": "karl", "text": "I believe there is no way how we can break free from confinement now"}
+    ]
+  },
   "choices": [
     {
       "text": "let's ask one of these blue dressed men for a bread, I'm still hungry",

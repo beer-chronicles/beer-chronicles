@@ -4,7 +4,7 @@
 	"dialogs": {
     "default": [
       {"character": "jakob", "text": "Awww man. My buddy, who works here, told me it would be open 24/7"},
-      {"character": "tracy", "text": "today's probably some legal holiday or some shit, but we have to search for beer"}
+      {"character": "tracy", "text": "Today's probably some legal holiday or some shit, but we have to search for beer"}
     ]
   },
   "choices": [
@@ -24,28 +24,6 @@
       "text": "this can't be the only place in this goddamn town where we can get alcolhol, let's go somewhere else!",
       "character": "tracy",
       "href": "funfair"
-    }, {
-      "text": "Drink water.",
-      "href": "apartment",
-      "local": {
-        "unset": ["bottleOfWater"],
-        "requires": ["bottleOfWater"],
-        "counters": [
-          { "name": "drankWaterTimes",
-            "operation": "add",
-            "amount": 1}
-        ]
-      }
-    }, {
-      "text": "Fill up bottle of water",
-      "href": "apartment",
-      "local": {
-        "set": ["bottleOfWater"],
-        "counters": [
-          { "name": "drankWaterTimes",
-            "lessThan": 3}
-        ]
-      }
     }
   ]
 }
