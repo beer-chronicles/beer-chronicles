@@ -3,10 +3,8 @@
   "location": "jakobsApartment",
   "dialogs": {
     "default": [
-      {
-        "character": "jakob",
-        "text": "Welcome to my awesome home."
-      }
+      {"character": "jakob", "text": "Welcome to my awesome room."},
+      {"character": "tracy", "text": "Amazing. All those pictures and trophies. I love football."}
     ],
     "hiddenStorage": [],
     "trophies": [],
