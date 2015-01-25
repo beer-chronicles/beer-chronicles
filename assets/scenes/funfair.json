@@ -26,6 +26,15 @@
             "greaterThan": 5}
         ]
       }
+    }, {
+      "text": "blackout (happy ending)",
+      "href": "credits",
+      "local": {
+        "counters": [
+          { "name": "choiceCounter",
+            "greaterThan": 9}
+        ]
+      }
     }
   ]
 }

@@ -26,6 +26,12 @@
             "greaterThan": 5}
         ]
       }
+    }, {
+    "text": "DEMOOONS!",
+      "href": "graveyard",
+      "global": {
+        "requires": ["demonScroll"]
+      }
     }
   ]
 }
