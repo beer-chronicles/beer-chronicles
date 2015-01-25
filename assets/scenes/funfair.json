@@ -8,6 +8,24 @@
     }, {
       "text": "Drink more beer",
       "href": "funfair"
+    }, {
+      "text": "Drink even more beer",
+      "href": "funfair",
+      "local": {
+        "counters": [
+          { "name": "choiceCounter",
+            "greaterThan": 3}
+        ]
+      }
+    }, {
+      "text": "Drink the most beer",
+      "href": "funfair",
+      "local": {
+        "counters": [
+          { "name": "choiceCounter",
+            "greaterThan": 5}
+        ]
+      }
     }
   ]
 }
