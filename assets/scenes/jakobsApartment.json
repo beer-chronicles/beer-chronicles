@@ -63,7 +63,7 @@
         ],
         "set": [
           "hiddenStorage"
-                ]
+        ]
       }
     },
     {
@@ -94,7 +94,7 @@
         ],
         "set": [
           "goodStuff"
-                ]
+        ]
       }
     },
     {
@@ -108,7 +108,7 @@
         ],
         "set": [
           "emptyRooms"
-                ]
+        ]
       }
     },
     {
@@ -140,7 +140,7 @@
         ],
         "set": [
           "treasureChest"
-                ]
+        ]
       }
     },
     {
@@ -154,7 +154,7 @@
         ],
         "set": [
           "lookAround"
-                ]
+        ]
       }
     },
     {
