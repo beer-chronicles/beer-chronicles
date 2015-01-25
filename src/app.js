@@ -12,7 +12,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
   var globalState = {};
   var dialogCounter = 0;
 
-  $scope.developmentMode=true;
+  $scope.developmentMode=false;
 
   var locationsLoader = $http.get("/assets/locations.json");
   var charactersLoader = $http.get("/assets/characters.json");
