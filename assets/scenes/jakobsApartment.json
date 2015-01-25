@@ -163,17 +163,19 @@
       "href": "jakobsApartment",
       "dialog": "feelHunger",
       "local": {
-        "counters": {
-          "name": "choiceCounter",
-          "greaterThan": 2
-        }
-      },
-      "deniedBy": [
-        "feelHunger"
-      ],
-      "set": [
-        "feelHunger"
-      ]
+        "counters": [
+          {
+            "name": "choiceCounter",
+            "greaterThan": 2
+          }
+        ],
+        "deniedBy": [
+          "feelHunger"
+        ],
+        "set": [
+          "feelHunger"
+        ]
+      }
     },
     {
       "text": "I'm getting bored. Can't you do anything to entertain me, sweeties?",
@@ -181,17 +183,19 @@
       "href": "jakobsApartment",
       "dialog": "entertainSweety",
       "local": {
-        "counters": {
-          "name": "choiceCounter",
-          "greaterThan": 3
-        }
-      },
-      "deniedBy": [
-        "entertainSweety"
-      ],
-      "set": [
-        "entertainSweety"
-      ]
+        "counters": [
+          {
+            "name": "choiceCounter",
+            "greaterThan": 3
+          }
+        ],
+        "deniedBy": [
+          "entertainSweety"
+        ],
+        "set": [
+          "entertainSweety"
+        ]
+      }
     }
   ]
 }
