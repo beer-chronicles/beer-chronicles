@@ -104,7 +104,8 @@
       "dialog": "emptyRooms",
       "local": {
         "deniedBy": [
-          "emptyRooms"
+          "emptyRooms",
+          "goodStuff"
         ],
         "set": [
           "emptyRooms"
