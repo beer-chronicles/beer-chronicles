@@ -91,7 +91,7 @@
     }, {
       "text": "Ok guys, enough is enough. You'll stay overnight to sober up!",
       "character": "policeman1",
-      "href": "credits",
+      "href": "badEnd",
       "local": {
         "requires": ["triedWithForce"]
       }
