@@ -45,6 +45,9 @@
       {"character": "tracy", "text": "And where are the club members?"},
       {"character": "karl", "text": "He ate them all."},
       {"character": "demon", "text": "Boooeerks..."}
+    ],
+    "karl": [
+      {"character": "karl", "text": "I did not find anything."}
     ]
   },
   "choices": [
@@ -87,7 +90,8 @@
     }, {
       "text": "Scout the graveyard.",
       "href": "graveyard",
-      "character": "karl"
+      "character": "karl",
+      "dialog": "karl"
     }, {
       "text": "Scout the graveyard <using misterious item obtained from Tracy's basement>",
       "href": "graveyard",
