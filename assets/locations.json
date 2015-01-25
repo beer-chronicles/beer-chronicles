@@ -1,6 +1,9 @@
 {
-  "black": {
+  "backgroundBlack": {
     "backgroundColor": "#000"
+  },
+  "backgroundPaper": {
+    "backgroundColor": "#f8ecc2"
   },
   "apartment": {
     "backgroundImage": "/assets/images/locations/tracys_apartment.jpg",
