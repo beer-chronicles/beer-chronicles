@@ -38,9 +38,9 @@
       {"character": "jakob", "text": "Wait. Why to my apartment?"},
       {"character": "karl", "text": "„My friends, please wait. Why go home? As long as I know that gasoline is made from alcohol, I won’t go anywhere else."},
       {"character": "tracy", "text": "You’re such a dump, Karl. I’m going!"},
-      {"character": "tracy", "text": "Wait! I’m coming!"},
-      {"character": "tracy", "text": "Zoe, come with me!"},
-      {"character": "tracy", "text": "<taking Zoe with him.>"}
+      {"character": "karl", "text": "Wait! I’m coming!"},
+      {"character": "jakob", "text": "Zoe, come with me!"},
+      {"character": "jakob", "text": "<taking Zoe with him.>"}
     ],
     "alchemy": [
       {"character": "karl", "text": "Please listen, people. I know that gasolines made of alcohol. So at least, we can drink it."},
@@ -53,13 +53,24 @@
   },
   "choices": [
     {
-      "text": " This little piece of sh**! Let us rob the store",
+      "text": "This little piece of sh**! Let's rob the store",
       "character": "jakob",
       "href": "gasStation",
       "dialog": "robbery",
       "local": {
+        "deniedBy": ["jakob"],
         "deniedBy": ["jail"],
         "set": ["jail"]
+      }
+    }, {
+      "text": "This sucks! Let's go somewhere else!",
+      "character": "tracy",
+      "href": "gasStation",
+      "dialog": "somewhereElse",
+      "local": {
+        "deniedBy": ["jail"],
+        "deniedBy": ["jakob"],
+        "set": ["jakob"]
       }
     }, {
       "text": "This is a station for the restoration of gasoline for automobiles, I'm pretty sure gasoline is made of alcohol",
@@ -67,7 +78,10 @@
       "href": "gasStation",
       "dialog": "alchemy",
       "local": {
-        "deniedBy": ["jail"]
+        "deniedBy": ["jakob"],
+        "deniedBy": ["jail"],
+        "deniedBy": ["gasoline"],
+        "set": ["gasoline"]
       }
     }, {
       "text": "follow the policemen",
@@ -75,6 +89,12 @@
       "href": "lockup",
       "local": {
         "requires": ["jail"]
+      }
+    }, {
+      "text": "<go to jakob's apartment>",
+      "href": "jakobsApartment",
+      "local": {
+        "requires": ["jakob"]
       }
     }
   ]
