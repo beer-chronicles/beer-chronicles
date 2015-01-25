@@ -3,27 +3,79 @@
   "location": "gasStation",
 	"dialogs": {
     "default": [
-      {"character": "jakob", "text": "Awww man. My buddy, who works here, told me it would be open 24/7"},
-      {"character": "tracy", "text": "Today's probably some legal holiday or some shit, but we have to search for beer"}
+      {"character": "zoe", "text": "Are we there yet?"},
+      {"character": "tracy", "text": "Zoe, please shut your mouth! Jaky, Are we there yet"},
+      {"character": "jakob", "text": "My friend told me it would be somewhere here… Ah, there it is!"},
+      {"character": "karl", "text": "My good friends, is it normal, that there is no light in there? Mayb…"},
+      {"character": "tracy", "text": "WHAT?! That can’t be! It‘s closed, Jakob can you explain this to me? Obviously I’m your sweetheart! So explain this to ME!!!"},
+      {"character": "jakob", "text": "F***! Tracy, why do you think you’re my sweetheart? I didn't say that"},
+      {"character": "tracy", "text": "Because I know it!"},
+      {"character": "zoe", "text": "Are we there yet?"},
+      {"character": "karl", "text": "Indeed Zoe. We are already arrived at our objective"},
+      {"character": "jakob", "text": "Zoe, what the hell is wrong with you! Come here and let that squirrel go…"}
+    ],
+    "robbery": [
+      {"character": "jakob", "text": "This f***er has lied to me. He said his store is 24/7."},
+      {"character": "tracy", "text": "And who’s this „so called“ friend? Maybe I know him..."},
+      {"character": "karl", "text": "Tracy. Now it doesn’t matter, that you know him probably."},
+      {"character": "tracy", "text": "Just be quiet Karl! What will you do, Jaky?"},
+      {"character": "jakob", "text": "I want to rob this place. He lied to me, so he must pay for his lie!"},
+      {"character": "narrator", "text": "<Our dudes searching for something to break the wiondow. At least they found some strange looking rock, but what then happens…>"},
+      {"character": "jakob", "text": "<throws the rock against the window>"},
+      {"character": "jakob", "text": "„And… WHAT??!!!!!!!"},
+      {"character": "narrator", "text": "<the rock he was throwing smashed on the wall next the window and leaves a crack.>"},
+      {"character": "narrator", "text": "<Sirens are hearing and our Dudes are flashed!>"},
+      {"character": "tracy", "text": "What the hell happens! We have to hide. Quick!"},
+      {"character": "policeman", "text": "Stay where you are! You little kids, what were you doing here?"},
+      {"character": "tracy", "text": "Well, we are going for a walk, so why are you here?"},
+      {"character": "jakob", "text": "We have heard an alarm from this gas station, so here we are."},
+      {"character": "jakob", "text": "Oh hey Buddies. How’s it going? Want some Brownies?"},
+      {"character": "jakob", "text": "Oh Zoe, shut the f*** up!"},
+      {"character": "jakob", "text": "Well, now you all are coming with us. You are going to Jail."}
+    ],
+    "somewhereElse": [
+      {"character": "tracy", "text": "Oh Damnit. Well somewhere else would be also beer. Let’s head to Jakobs apartment."},
+      {"character": "jakob", "text": "Wait. Why to my apartment?"},
+      {"character": "karl", "text": "„My friends, please wait. Why go home? As long as I know that gasoline is made from alcohol, I won’t go anywhere else."},
+      {"character": "tracy", "text": "You’re such a dump, Karl. I’m going!"},
+      {"character": "tracy", "text": "Wait! I’m coming!"},
+      {"character": "tracy", "text": "Zoe, come with me!"},
+      {"character": "tracy", "text": "<taking Zoe with him.>"}
+    ],
+    "alchemy": [
+      {"character": "karl", "text": "Please listen, people. I know that gasolines made of alcohol. So at least, we can drink it."},
+      {"character": "jakob", "text": "“Karl, If you want to die… Don’t do it, you idiot. We need your intelligence for school"},
+      {"character": "zoe", "text": "„But it tastes soooooo good."},
+      {"character": "tracy", "text": "Are you kidding me, Zoe? You drank it?"},
+      {"character": "zoe", "text": "What are you talking about? You can’t drink a joint!"},
+      {"character": "tracy", "text": "… I’m done."}
     ]
   },
   "choices": [
     {
-      "text": "We should rob this place! My buddy lied to me so they all have to pay!",
+      "text": " This little piece of sh**! Let us rob the store",
       "character": "jakob",
-      "href": "lockup"
+      "href": "gasStation",
+      "dialog": "robbery",
+      "local": {
+        "deniedBy": ["jail"],
+        "set": ["jail"]
+      }
     }, {
       "text": "This is a station for the restoration of gasoline for automobiles, I'm pretty sure gasoline is made of alcohol",
       "character": "karl",
-      "href": "gasStation"
+      "href": "gasStation",
+      "dialog": "alchemy",
+      "local": {
+        "deniedBy": ["jail"]
+      }
     }, {
-      "text": "We should make a flower offering to the beer god so he can make it rain beer.",
-      "character": "zoe",
-      "href": "gasStation"
-    }, {
-      "text": "this can't be the only place in this goddamn town where we can get alcolhol, let's go somewhere else!",
-      "character": "tracy",
-      "href": "funfair"
+      "text": "follow the policemen",
+      "character": "narrator",
+      "href": "lockup",
+      "local": {
+        "requires": ["jail"]
+      }
     }
   ]
 }

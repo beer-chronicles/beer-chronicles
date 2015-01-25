@@ -48,17 +48,32 @@
     ],
     "karl": [
       {"character": "karl", "text": "I did not find anything."}
+    ],
+    "jakob": [
+      {"character": "jakob", "text": "Nothing but zombies."}
+    ],
+    "tracy": [
+      {"character": "tracy", "text": "This place is so dirty, I will ruin my shoes. I stay here."}
     ]
+
   },
   "choices": [
     {
       "text": "Scout the graveyard.",
       "href": "graveyard",
-      "character": "jakob"
+      "character": "jakob",
+      "dialog": "jakob",
+      "local": {
+        "deniedBy": ["car"]
+      }
     }, {
       "text": "Scout the graveyard.",
       "href": "graveyard",
-      "character": "tracy"
+      "character": "tracy",
+      "dialog": "tracy",
+      "local": {
+        "deniedBy": ["car"]
+      }
     }, {
       "text": "Scout the graveyard.",
       "href": "graveyard",
@@ -83,15 +98,19 @@
       "href": "graveyard",
       "character": "zoe",
       "dialog": "zoe3",
-        "local": {
-        "set": ["zoe3"],
-        "requires": ["zoe2"]
+      "local": {
+        "set": ["car"],
+        "requires": ["zoe2"],
+        "deniedBy": ["car"]
       }
     }, {
       "text": "Scout the graveyard.",
       "href": "graveyard",
       "character": "karl",
-      "dialog": "karl"
+      "dialog": "karl",
+      "local": {
+        "deniedBy": ["car"]
+      }
     }, {
       "text": "Scout the graveyard <using misterious item obtained from Tracy's basement>",
       "href": "graveyard",
@@ -100,6 +119,24 @@
       "global": {
         "requires": ["demonScroll"],
         "unset": ["demonScroll"]
+      }
+    }, {
+      "text": "Go to gas station",
+      "href": "gasStation",
+      "local": {
+        "requires": ["car"]
+      }
+    }, {
+      "text": "Go to Jakob's apartment",
+      "href": "jakobsApartment",
+      "local": {
+        "requires": ["car"]
+      }
+    }, {
+      "text": "Just drive",
+      "href": "funfair",
+      "local": {
+        "requires": ["car"]
       }
     }
   ]
