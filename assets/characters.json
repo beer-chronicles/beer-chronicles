@@ -33,5 +33,10 @@
     "name": "Policeman 3",
     "image": "",
     "color": "#EEFFDD"
+  },
+  "squirrel": {
+    "name": "Squirrel",
+    "image": "/assets/characters/squirrel.png",
+    "color": "#FF9911"
   }
 }
