@@ -66,7 +66,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
       return previousValue;
     }, scenes);
     verifyScenes();
-    $scope.gotoScene("lockup");
+    $scope.gotoScene("start");
   });
 
   var areConditionsFulfilled = function(condition, state) {

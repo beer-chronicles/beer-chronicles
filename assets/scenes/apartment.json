@@ -91,7 +91,7 @@
         "set": ["fridge"]
       }
     }, {
-      "text": "I put all the beer crates in the basement, we should start there.",
+      "text": "I always put my beer into my basement, we should look in the basement.",
       "character": "jakob",
       "href": "apartment",
       "dialog": "basement",
