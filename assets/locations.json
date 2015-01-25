@@ -10,10 +10,10 @@
     "title": "The apartment",
     "description": "Tracy's apartment"
   },
-  "jakobs_apartment": {
+  "jakobsApartment": {
     "backgroundImage": "/assets/images/locations/jakobs_apartment.jpg",
-    "title": "Jakob's apartment",
-    "description": ""
+    "title": "Jakob's room",
+    "description": "A room uniting the sex appeal of the whole dormitory."
   },
   "gasStation": {
     "backgroundImage": "/assets/images/locations/gas_station.jpg",

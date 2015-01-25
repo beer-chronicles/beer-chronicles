@@ -1,6 +1,7 @@
 {
   "id": "lockup",
   "location": "lockup",
+  "description": "The place you don't want see the inside.",
   "dialogs": {
     "default": [
       {"character": "zoe", "text": "it's... silent in here, I like it :)"},
@@ -57,17 +58,42 @@
       {"character": "tracy", "text": "Stop with the sad eyes, I'll buy you a new one. You know, like - once we get out of here."},
       {"character": "jakob", "text": "Are you done babbling? I need a beer, we need to get out of here. What do we do now?"}
     ],
+    "withForce": [
+      {"character": "karl", "text": "Oh my, I feel so sickish! I might die this instant!"},
+      {"character": "zoe", "text": "You certainly look dead."},
+      {"character": "tracy", "text": "<screams> Help, we have an almost dead nerdo here!"},
+      {"character": "policeman1", "text": "Fine, one less of you to care about!"},
+      {"character": "tracy", "text": "COME, FAST!"},
+      {"character": "narrator", "text": "<The policeman enters the room. Jakob tries to hit him, but the policeman deftly avoids this and disables jakob.>"},
+      {"character": "narrator", "text": "<Ok, that was a lie. As the policeman enters jakob stumbles towards him, trips over his own feed and hits the ground.>"},
+      {"character": "policeman1", "text": "Ok, I have enough of you. I only wanted to take you in for a few hours, but you might want to stay ALL NIGHT."}
+    ],
     "empty" : []
   },
   "choices": [
     {
       "text": "I just have to bend those cell bars and we're as good as free.",
       "character": "jakob",
-      "href": "lockup",
       "dialog": "bendingBars",
       "local": {
         "deniedBy": ["triedToBend"],
         "set": ["triedToBend"]
+      }
+    }, {
+      "text": "Karl plays dead, Tracy screams for help and when a cop comes, we hit him and escape!",
+      "character": "jakob",
+      "dialog": "withForce",
+      "local": {
+        "requires": ["triedToBend"],
+        "deniedBy": ["triedWithForce"],
+        "set": ["triedWithForce"]
+      }
+    }, {
+      "text": "Ok guys, enough is enough. You'll stay overnight to sober up!",
+      "character": "policeman1",
+      "href": "credits",
+      "local": {
+        "requires": ["triedWithForce"]
       }
     }, {
       "text": "I am hungry, Zoe give me the sandwich you found.",

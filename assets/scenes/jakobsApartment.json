@@ -1,0 +1,202 @@
+{
+  "id": "jakobsApartment",
+  "location": "jakobsApartment",
+  "dialogs": {
+    "default": [
+      {
+        "character": "jakob",
+        "text": "Welcome to my awesome home."
+      }
+    ],
+    "hiddenStorage": [],
+    "trophies": [],
+    "minibar": [],
+    "coldBeer": [],
+    "goodStuff": [],
+    "emptyRooms": [],
+    "spiritSquirrel": [],
+    "treasureChest": [],
+    "lookAround": [],
+    "feelHunger": [],
+    "entertainSweety": []
+  },
+  "choices": [
+    {
+      "text": "Oh, all those trophies. I want to see them all.",
+      "character": "tracy",
+      "href": "jakobsApartment",
+      "dialog": "trophies",
+      "local": {
+        "deniedBy": [
+          "trophies"
+        ],
+        "set": [
+          "trophies"
+        ]
+      }
+    },
+    {
+      "text": "Here I can offer you anything from my minibar, dudes.",
+      "character": "jakob",
+      "href": "jakobsApartment",
+      "dialog": "minibar",
+      "local": {
+        "deniedBy": [
+          "minibar"
+        ],
+        "set": [
+          "minibar"
+        ]
+      }
+    },
+    {
+      "text": "I got a lot more of good stuff in a hidden storage.",
+      "character": "jakob",
+      "href": "jakobsApartment",
+      "dialog": "hiddenStorage",
+      "local": {
+        "requires": [
+          "minibar"
+        ],
+        "deniedBy": [
+          "hiddenStorage"
+        ],
+        "set": [
+          "hiddenStorage"
+        ]
+      }
+    },
+    {
+      "text": "I consider you to be clever enough to keep some beer cold. Following this clue it must be in the fridge.",
+      "character": "karl",
+      "href": "jakobsApartment",
+      "dialog": "coldBeer",
+      "local": {
+        "deniedBy": [
+          "coldBeer"
+        ],
+        "set": [
+          "coldBeer"
+        ]
+      }
+    },
+    {
+      "text": "<Grab some of the good stuff. All of it.>",
+      "character": "zoe",
+      "href": "jakobsApartment",
+      "dialog": "goodStuff",
+      "local": {
+        "requires": [
+          "hiddenStorage"
+        ],
+        "deniedBy": [
+          "goodStuff"
+        ],
+        "set": [
+          "goodStuff"
+        ]
+      }
+    },
+    {
+      "text": "Empty rooms.... I can't sence... any spirit... here...",
+      "character": "zoe",
+      "href": "jakobsApartment",
+      "dialog": "emptyRooms",
+      "local": {
+        "deniedBy": [
+          "emptyRooms",
+          "goodStuff"
+        ],
+        "set": [
+          "emptyRooms"
+        ]
+      }
+    },
+    {
+      "text": "Oh... I sence.. the spirit of a... squirrel?",
+      "character": "zoe",
+      "href": "jakobsApartment",
+      "dialog": "spiritSquirrel",
+      "local": {
+        "requires": [
+          "goodStuff"
+        ],
+        "deniedBy": [
+          "spiritSquirrel",
+          "emptyRooms"
+        ],
+        "set": [
+          "spiritSquirrel"
+        ]
+      }
+    },
+    {
+      "text": "I wonder what might be in this treasure chest?",
+      "character": "karl",
+      "href": "jakobsApartment",
+      "dialog": "treasureChest",
+      "local": {
+        "deniedBy": [
+          "treasureChest"
+        ],
+        "set": [
+          "treasureChest"
+        ]
+      }
+    },
+    {
+      "text": "I'll have a look around to look for beer.",
+      "character": "tracy",
+      "href": "jakobsApartment",
+      "dialog": "lookAround",
+      "local": {
+        "deniedBy": [
+          "lookAround"
+        ],
+        "set": [
+          "lookAround"
+        ]
+      }
+    },
+    {
+      "text": "I feel... the hunger...",
+      "character": "zoe",
+      "href": "jakobsApartment",
+      "dialog": "feelHunger",
+      "local": {
+        "counters": [
+          {
+            "name": "choiceCounter",
+            "greaterThan": 2
+          }
+        ],
+        "deniedBy": [
+          "feelHunger"
+        ],
+        "set": [
+          "feelHunger"
+        ]
+      }
+    },
+    {
+      "text": "I'm getting bored. Can't you do anything to entertain me, sweeties?",
+      "character": "tracy",
+      "href": "jakobsApartment",
+      "dialog": "entertainSweety",
+      "local": {
+        "counters": [
+          {
+            "name": "choiceCounter",
+            "greaterThan": 3
+          }
+        ],
+        "deniedBy": [
+          "entertainSweety"
+        ],
+        "set": [
+          "entertainSweety"
+        ]
+      }
+    }
+  ]
+}
