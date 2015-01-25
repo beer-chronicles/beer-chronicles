@@ -3,49 +3,15 @@
   "location": "funfair",
   "dialogs": {
     "default": [
-      {"character": "doorkeeper", "text": "here our travelers find a place where they can find beer..."},
-      {"character": "karl", "text": "finally, we obtain the liquor of our dreams, the ambrosia we all leeched for"},
-      {"character": "doorkeeper", "text": "Sorry buds, but you're clearly too drunk to go here, go home and get some sleep!"},
-      {"character": "tracy", "text": "Nooo, too drunk is impossible just let us in!"},
-      {"character": "doorkeeper", "text": "It is very possible, and you're the best example. You'd need a demon make me let me in"}
-    ],
-    "begging": [
-      {"character": "tracy", "text": "But you have to let us innn!"},
-      {"character": "doorkeeper", "text": "no, I don't. No demons - no you in this tent. And we all know there is nothing like a demon"}
-    ],
-    "demon": [
-      {"character": "zoe", "text": "<throws the little demon at the doorkeeper>"},
-      {"character": "doorkeeper", "text": "NO! what?"},
-      {"character": "doorkeeper", "text": "What have you done???"},
-      {"character": "doorkeeper", "text": "<runs away>"},
-      {"character": "tracy", "text": "that was easy <enters the tent | the others follow her>"}
+      {"character": "narrator", "text": "and like this, our fine travellers found beer."}
     ]
   },
   "choices": [
     {
-      "text": "but you haaave to let us in!",
-      "dialog": "begging",
-      "character": "tracy",
-      "local": {
-        "deniedBy": ["victory"]
-      }
-    }, {
-      "text": "Let's just drag the demon on this guy...",
-      "href": "funfair",
-      "dialog": "demon",
-      "local": {
-        "deniedBy": ["victory"],
-        "set": ["victory"]
-      },
-      "gobal": {
-        "requires": ["demon"]
-      }
-    }, {
       "text": "Drink beer",
       "character": "karl",
       "href": "funfair",
       "local": {
-        "requires": ["victory"],
         "counters": [
           { "name": "beersK",
             "operation": "add",
@@ -59,7 +25,6 @@
       "character": "tracy",
       "href": "funfair",
       "local": {
-        "requires": ["victory"],
         "counters": [
           { "name": "beersT",
             "operation": "add",
@@ -73,7 +38,6 @@
       "character": "jakob",
       "href": "funfair",
       "local": {
-        "requires": ["victory"],
         "counters": [
           { "name": "beersJ",
             "operation": "add",
@@ -87,7 +51,6 @@
       "character": "zoe",
       "href": "funfair",
       "local": {
-        "requires": ["victory"],
         "counters": [
           { "name": "beersZ",
             "operation": "add",
@@ -102,13 +65,13 @@
       "local": {
         "counters": [
           { "name": "beersK",
-            "greaterThan": 3},
+            "greaterThan": 2},
           { "name": "beersT",
-            "greaterThan": 4},
+            "greaterThan": 3},
           { "name": "beersJ",
-            "greaterThan": 6},
+            "greaterThan": 4},
           { "name": "beersZ",
-            "greaterThan": 8}
+            "greaterThan": 5}
         ]
       }
     }
