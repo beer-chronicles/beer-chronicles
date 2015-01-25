@@ -16,7 +16,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
 
   var locationsLoader = $http.get("/assets/locations.json");
   var charactersLoader = $http.get("/assets/characters.json");
-  var sceneLoaders = ["start", "apartment", "gasStation", "lockUp", "funfair"]
+  var sceneLoaders = ["start", "apartment", "gasStation", "lockUp", "funfair", "graveyard"]
       .map(function(resource) {
         return $http.get("/assets/scenes/" + resource + ".json");
       });
@@ -186,4 +186,18 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
       $scope.nextDialogStep();
     }
   }
+
+  $scope.goFullScreen = function() {
+    var elem = document.getElementById("body");
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+    }
+    $scope.fullScreen = true;
+  };
 }]);
