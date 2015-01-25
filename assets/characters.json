@@ -1,7 +1,7 @@
 {
   "karl": {
     "name": "Karl",
-    "image": "http://placehold.it/200x200/6464c8&text=Karl",
+    "image": "/assets/characters/karl.png",
     "color": "#6464C8"
   },
   "zoe": {
