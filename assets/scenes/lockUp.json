@@ -35,34 +35,51 @@
       {"character": "policeman1", "text": "SILENCE! BRING ... ME ... A ... SHRUBBERY!"},
       {"character": "tracy", "text": "Oh come on, we heard you alright... just leave us alone!"},
       {"character": "zoe", "text": "As you command... <starts looking for a shrubbery>"}
-    ]
+    ],
+    "bendingBars": [
+      {"character": "jakob", "text": "Step aside! All those years of training finally pay off!"},
+      {"character": "narrator", "text": "<The bars remaing unaffected by Jakobs brute force>"},
+      {"character": "tracy", "text": "Oh my big strong (yet ineffective) hero!"},
+      {"character": "karl", "text": "Faith can move mountains! We have to believe in Jakob being able to subdue those puny bars of steel."},
+      {"character": "zoe", "text": "Oh cute little squirrel! Come here!"},
+      {"character": "squirrel", "text": "Go to hell you dumb B#$%H!"},
+      {"character": "tracy", "text": "Are you alright zoe? You were stroking the pillow for 5 minutes now."},
+      {"character": "zoe", "text": "Squirrels with bad mouths..."},
+      {"character": "tracy", "text": "You're the Obelix of stoned people..."}
+    ],
+    "tracyEatingSandwich": [
+      {"character": "zoe", "text": "I'm looking after my homies, here you go."},
+      {"character": "tracy", "text": "Thanks"},
+      {"character": "tracy", "text": "YUCK! This is completely inedable. Why did you carry THAT around?!"},
+      {"character": "zoe", "text": "I liked the green color, if you don't like it give it back!"},
+      {"character": "tracy", "text": "No way you're going to eat that. <throws the sandwich out of the window."},
+      {"character": "zoe", "text": "Awwwwwwwwwwwwwwwwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwwwwwwwwww"},
+      {"character": "tracy", "text": "Stop with the sad eyes, I'll buy you a new one. You know, like - once we get out of here."},
+      {"character": "jakob", "text": "Are you done babbling? I need a beer, we need to get out of here. What do we do now?"}
+    ],
+    "empty" : []
   },
   "choices": [
     {
-      "text": "Let's ask one of these blue dressed men for a bread, I'm still hungry",
-      "character": "zoe",
-      "href": "lockup",
-      "local": {
-        "unset": ["rollDice"]
-      }
-    }, {
       "text": "I just have to bend those cell bars and we're as good as free.",
       "character": "jakob",
       "href": "lockup",
+      "dialog": "bendingBars",
       "local": {
-        "unset": ["rollDice"]
+        "deniedBy": ["triedToBend"],
+        "set": ["triedToBend"]
       }
     }, {
-      "text": "You're all crazy, just ask one of our cellmates for alcohol, and we'll survive until we get the f*** out of here",
+      "text": "I am hungry, Zoe give me the sandwich you found.",
       "character": "tracy",
-      "href": "lockup",
-      "local": {
-        "unset": ["rollDice"]
+      "dialog": "tracyEatingSandwich",
+      "global": {
+        "requires": ["moldyToast"],
+        "unset": ["moldyToast"]
       }
     }, {
       "text": "We can roll dice, when we roll a pair we get free",
       "character": "karl",
-      "href": "lockup",
       "dialog": "rollDice",
       "local": {
         "set": ["rollDice"],
@@ -74,27 +91,66 @@
 	      ]
       }
     }, {
-      "text": "Unbelievable, we rolled a pair and the door unlock, let's get outta here!",
+      "text": "Unbelievable, we rolled a pair and the door is now unlocked, let's get outta here!",
       "character": "tracy",
+      "href": "graveyard",
+      "dialog": "jail",
       "local": {
         "requires": ["rollDice"],
         "unset": ["rollDice"],
         "counters": [
           { "name" : "diceRoll",
             "equals": 1
-          }
+          },
+          { "name": "pairRole",
+            "equals": 2}
+        ]
+      }
+    }, {
+      "text": "We rolled a pair, and are still here, but we could try again!",
+      "character": "karl",
+      "dialog": "empty",
+      "local": {
+        "counters": [
+          { "name" : "diceRoll",
+            "equals": 1
+          },
+          { "name": "pairRole",
+            "operation": "add",
+            "amount": 1},
+          { "name": "pairRole",
+            "equals": 0}
+        ]
+      }
+    }, {
+      "text": "Maybe dice rolling is of no use after all... but maybe one last time?",
+      "character": "karl",
+      "dialog": "empty",
+      "local": {
+        "counters": [
+          { "name" : "diceRoll",
+            "equals": 1
+          },
+          { "name": "pairRole",
+            "operation": "add",
+            "amount": 1},
+          { "name": "pairRole",
+            "equals": 1}
         ]
       }
     }, {
       "text": "Ew, no pair... but logic tells us, we should roll again!",
       "character": "karl",
+      "dialog": "empty",
       "local": {
         "requires": ["rollDice"],
-        "unset": ["rollDice"],
         "counters": [
           { "name" : "diceRoll",
             "equals": 0
-          }
+          },
+          { "name": "diceRoll",
+            "operation": "rnd",
+            "amount": 2}
         ]
       }
     }, {

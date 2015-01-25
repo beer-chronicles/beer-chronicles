@@ -25,23 +25,75 @@
     {
       "text": "but you haaave to let us in!",
       "dialog": "begging",
-      "character": "tracy"
+      "character": "tracy",
+      "local": {
+        "deniedBy": ["victory"]
+      }
     }, {
-      "text": "Let's just drag the demon on this guy and then he runs away...",
+      "text": "Let's just drag the demon on this guy...",
+      "href": "funfair",
       "dialog": "demon",
-      "": {
-        "requires": ["demon"]
+      "local": {
+        "deniedBy": ["victory"],
+        "set": ["victory"]
       },
       "gobal": {
         "requires": ["demon"]
       }
     }, {
-      "text": "Drink the most beer",
+      "text": "Drink beer",
+      "character": "karl",
       "href": "funfair",
       "local": {
+        "requires": ["victory"],
         "counters": [
-          { "name": "choiceCounter",
-            "greaterThan": 5}
+          { "name": "beersK",
+            "operation": "add",
+            "amount": 1},
+          { "name": "beersK",
+            "lessThan": 4}
+        ]
+      }
+    }, {
+      "text": "Drink beer",
+      "character": "tracy",
+      "href": "funfair",
+      "local": {
+        "requires": ["victory"],
+        "counters": [
+          { "name": "beersT",
+            "operation": "add",
+            "amount": 1},
+          { "name": "beersT",
+            "lessThan": 5}
+        ]
+      }
+    }, {
+      "text": "Drink beer",
+      "character": "jakob",
+      "href": "funfair",
+      "local": {
+        "requires": ["victory"],
+        "counters": [
+          { "name": "beersJ",
+            "operation": "add",
+            "amount": 1},
+          { "name": "beersJ",
+            "lessThan": 7}
+        ]
+      }
+    }, {
+      "text": "Drink beer",
+      "character": "zoe",
+      "href": "funfair",
+      "local": {
+        "requires": ["victory"],
+        "counters": [
+          { "name": "beersZ",
+            "operation": "add",
+            "amount": 1},
+          { "name": "beersZ",
+            "lessThan": 9}
         ]
       }
     }, {
@@ -49,8 +101,14 @@
       "href": "credits",
       "local": {
         "counters": [
-          { "name": "choiceCounter",
-            "greaterThan": 9}
+          { "name": "beersK",
+            "greaterThan": 3},
+          { "name": "beersT",
+            "greaterThan": 4},
+          { "name": "beersJ",
+            "greaterThan": 6},
+          { "name": "beersZ",
+            "greaterThan": 8}
         ]
       }
     }

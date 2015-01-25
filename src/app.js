@@ -16,7 +16,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
 
   var locationsLoader = $http.get("/assets/locations.json");
   var charactersLoader = $http.get("/assets/characters.json");
-  var sceneLoaders = ["start", "apartment", "gasStation", "lockUp", "funfair", "graveyard", "credits"]
+  var sceneLoaders = ["start", "apartment", "jakobsApartment", "gasStation", "lockUp", "funfair", "graveyard", "credits"]
       .map(function(resource) {
         return $http.get("/assets/scenes/" + resource + ".json");
       });
@@ -38,7 +38,7 @@ app.controller('GameCtrl', ['$http', '$scope', '$log', '$q', function($http, $sc
       var sceneName = scene.id + ": " + scene.location.title;
       scene.choices.forEach(function(choice) {
         choice.character = characters[choice.character];
-        if (!(choice.href in scenes)) {
+        if (typeof choice.href != 'undefined' && !(choice.href in scenes)) {
           $log.error("Choice '" + choice.text + "' of scene " + sceneName + " references invalid scene id " + choice.href);
         }
       });
