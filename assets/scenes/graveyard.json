@@ -1,0 +1,31 @@
+{
+  "id": "graveyard",
+  "location": "graveyard",
+  "choices": [
+    {
+      "text": "Drink beer.",
+      "href": "graveyard"
+    }, {
+      "text": "Drink more beer",
+      "href": "graveyard"
+    }, {
+      "text": "Drink even more beer",
+      "href": "graveyard",
+      "local": {
+        "counters": [
+          { "name": "choiceCounter",
+            "greaterThan": 3}
+        ]
+      }
+    }, {
+      "text": "Drink the most beer",
+      "href": "graveyard",
+      "local": {
+        "counters": [
+          { "name": "choiceCounter",
+            "greaterThan": 5}
+        ]
+      }
+    }
+  ]
+}
