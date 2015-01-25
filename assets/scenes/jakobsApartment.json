@@ -18,7 +18,8 @@
       {"character": "jakob", "text": "Here all the good liquors. Feel like at home, buddies."},
       {"character": "tracy", "text": "Cool! So many choices for drinks."},
       {"character": "karl", "text": "We should just make ourself aware of the fact that none of all those liquors is beer in fact."},
-      {"character": "tracy", "text": "Their useless! We need beer..."}
+      {"character": "tracy", "text": "Their useless! We need beer..."},
+      {"character": "jakob", "text": "No problem, sweety. I got more good stuff hidden somewhere here..."}
     ],
     "coldBeer": [
       {"character": "jakob", "text": "Dude! Sorry, but this is my fridge."},
