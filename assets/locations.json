@@ -18,5 +18,9 @@
   "funfair": {
     "backgroundImage": "http://placehold.it/1920x1080&text=notTheBrewery",
     "title": "Funfair"
+  },
+  "funfair": {
+    "backgroundImage": "http://placehold.it/1920x1080&text=funfair?",
+    "title": "Funfair"
   }
 }
