@@ -26,6 +26,7 @@
   },
   "graveyard": {
     "backgroundImage": "/assets/images/locations/gas_station.jpg",
-    "title": "Graveyard"
+    "title": "Graveyard",
+    "description": "A place of silence, peace and occasional zombie encounters"
   }
 }
