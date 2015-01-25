@@ -38,5 +38,10 @@
     "name": "????",
     "image": "/assets/characters/demon.png",
     "color": "#FF0000"
+  },
+  "squirrel": {
+    "name": "????",
+    "image": "/assets/characters/squirrel.png",
+    "color": "#770000"
   }
 }
