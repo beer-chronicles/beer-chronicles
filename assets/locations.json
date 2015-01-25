@@ -3,7 +3,7 @@
     "backgroundColor": "#000"
   },
   "apartment": {
-    "backgroundImage": "/assets/images/location-apartment.jpg",
+    "backgroundImage": "/assets/images/locations/tracys_apartment.jpg",
     "title": "The apartment",
     "description": "Tracy's apartment"
   },
@@ -13,19 +13,19 @@
     "description": ""
   },
   "gasStation": {
-    "backgroundImage": "http://placehold.it/1920x1080&text=gas-station",
+    "backgroundImage": "/assets/images/locations/gas_station.jpg",
     "title": "Gas station"
   },
   "lockup": {
-    "backgroundImage": "http://placehold.it/1920x1080&text=lockup",
+    "backgroundImage": "/assets/images/locations/police_station.jpg",
     "title": "Lockup"
   },
   "funfair": {
-    "backgroundImage": "http://placehold.it/1920x1080&text=notTheBrewery",
+    "backgroundImage": "/assets/images/locations/funfair.jpg",
     "title": "Funfair"
   },
   "graveyard": {
-    "backgroundImage": "http://placehold.it/1920x1080&text=funfair?",
+    "backgroundImage": "/assets/images/locations/gas_station.jpg",
     "title": "Graveyard"
   }
 }
