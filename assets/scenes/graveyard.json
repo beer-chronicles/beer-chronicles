@@ -98,15 +98,19 @@
       "href": "graveyard",
       "character": "zoe",
       "dialog": "zoe3",
-        "local": {
-        "set": ["zoe3"],
-        "requires": ["zoe2"]
+      "local": {
+        "set": ["car"],
+        "requires": ["zoe2"],
+        "deniedBy": ["car"]
       }
     }, {
       "text": "Scout the graveyard.",
       "href": "graveyard",
       "character": "karl",
-      "dialog": "karl"
+      "dialog": "karl",
+      "local": {
+        "deniedBy": ["car"]
+      }
     }, {
       "text": "Scout the graveyard <using misterious item obtained from Tracy's basement>",
       "href": "graveyard",
@@ -115,6 +119,18 @@
       "global": {
         "requires": ["demonScroll"],
         "unset": ["demonScroll"]
+      }
+    }, {
+      "text": "Go to gas station",
+      "href": "gasStation",
+      "local": {
+        "requires": ["car"]
+      }
+    }, {
+      "text": "Go to Jakob's apartment",
+      "href": "jakobsApartment",
+      "local": {
+        "requires": ["car"]
       }
     }
   ]
