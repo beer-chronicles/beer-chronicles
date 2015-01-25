@@ -5,7 +5,7 @@
     <title>beer chronicles</title>
     <link rel="stylesheet" href="/main.css">
   </head>
-  <body ng-controller="GameCtrl">
+  <body ng-controller="GameCtrl" id="body">
     <div class="location" style="background-color: {{scene.location.backgroundColor}}; background-image: url('{{scene.location.backgroundImage}}');" ng-click="nextDialogStep()">
       <div class="content">
         <h1>{{scene.location.title}}</h1>
