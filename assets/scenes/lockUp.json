@@ -7,24 +7,62 @@
       {"character": "tracy", "text": "I can't believe this happened, this sucks!"},
       {"character": "jakob", "text": "nothing can stop me from getting beer, we have to break out!"},
       {"character": "karl", "text": "I believe there is no way how we can break free from confinement now"}
+    ],
+    "cellBars": [
+      {"character": "narrator", "text": "<joseph tries to bend the cell bars but whatever what he does, it doesn't result in any visual changes>"},
+      {"character": "jakob", "text": "hngggg... hmpf... arrrgh..."},
+      {"character": "jakob", "text": "It doesn't work??? how is this possible?"}
     ]
   },
   "choices": [
     {
       "text": "let's ask one of these blue dressed men for a bread, I'm still hungry",
       "character": "zoe",
-      "href": "lockup"
+      "href": "lockup",
+      "local": {
+        "unset": ["rollDice"]
+      }
     }, {
       "text": "I just have to bend those cell bars and we're as good as free.",
       "character": "jakob",
-      "href": "lockup"
+      "href": "lockup",
+      "local": {
+        "unset": ["rollDice"]
+      }
     }, {
       "text": "you're all crazy, just ask one of our cellmates for alcohol, and we'll survive until we get the f*** out of here",
       "character": "tracy",
-      "href": "lockup"
+      "href": "lockup",
+      "local": {
+        "unset": ["rollDice"]
+      }
     }, {
-      "text": "roll die",
-      "href": "lockup"
+      "text": "We can roll die, when we roll a pair we get free",
+      "character": "karl",
+      "href": "lockup",
+      "local": {
+        "set": ["rollDice"]
+        
+      }
+    }, {
+      "text": "We rooled a pair! we can get out!",
+      "character": "karl",
+      "href": "graveyard",
+      "local": {
+        "requires": ["rollDice"],
+        "set": ["getFree"],
+        "unset": ["rollDice"],
+        "chance": 0.15
+      }
+    }, {
+      "text": "Ew, no pair...",
+      "character": "karl",
+      "href": "lockup",
+      "local": {
+        "requires": ["rollDice"],
+        "deniedBy": ["getFree"],
+        "unset": ["rollDice"]
+      }
     }
   ]
 }
