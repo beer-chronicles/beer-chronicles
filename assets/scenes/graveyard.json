@@ -1,6 +1,16 @@
 {
   "id": "graveyard",
   "location": "graveyard",
+  "dialogs": {
+    "default": [
+      {"character": "tracy", "text": "How did we end up here?!"},
+      {"character": "tracy", "text": "This place is creepy"},
+      {"character": "zoe", "text": "I can almost feel the presence of my grandma~~"},
+      {"character": "jakob", "text": "Your granny is still alive..."},
+      {"character": "zoe", "text": "Oh, I guess I just feel hungry then."},
+      {"character": "karl", "text": "I recommend we split up and look for a way to get out of here."}
+    ]
+  },
   "choices": [
     {
       "text": "Drink beer.",
