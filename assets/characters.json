@@ -18,5 +18,20 @@
     "name": "Tracy",
     "image": "/assets/characters/tracy.png",
     "color": "#FFFF32"
+  },
+  "policeman1": {
+    "name": "Policeman 1",
+    "image": "",
+    "color": "#EEFFDD"
+  },
+  "policeman2": {
+    "name": "Policeman 2",
+    "image": "",
+    "color": "#EEFFDD"
+  },
+  "policeman3": {
+    "name": "Policeman 3",
+    "image": "",
+    "color": "#EEFFDD"
   }
 }
