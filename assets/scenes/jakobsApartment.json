@@ -3,16 +3,26 @@
   "location": "jakobsApartment",
   "dialogs": {
     "default": [
-      {
-        "character": "jakob",
-        "text": "Welcome to my awesome home."
-      }
+      {"character": "jakob", "text": "Welcome to my awesome room."},
+      {"character": "tracy", "text": "Amazing. All those pictures and trophies. I love football."}
     ],
     "hiddenStorage": [],
-    "trophies": [],
+    "trophies": [
+      {"character": "tracy", "text": "Did you win all those trophies yourself, Jakob?"},
+      {"character": "jakob", "text": "Yeah, I got honored several times. Best player and stuff like that."},
+      {"character": "tracy", "text": "And those pictures... so amazing!"},
+      {"character": "jakob", "text": "Yeah, that's me..."},
+      {"character": "karl", "text": "I do not want to interrupt your conversation, but might we return to beer concerning the topic."}
+    ],
     "minibar": [],
-    "coldBeer": [],
-    "goodStuff": [],
+    "coldBeer": [
+      {"character": "jakob", "text": "Dude! Sorry, but this is my fridge."},
+      {"character": "karl", "text": "But it might be containing beer for all of us."},
+      {"character": "jakob", "text": "Just leave it alone!"},
+      {"character": "zoe", "text": "Peace!"}
+    ],
+    "goodStuff": [
+    ],
     "emptyRooms": [],
     "spiritSquirrel": [],
     "treasureChest": [],

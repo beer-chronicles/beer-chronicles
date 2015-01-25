@@ -11,7 +11,7 @@
     "description": "Tracy's apartment"
   },
   "jakobsApartment": {
-    "backgroundImage": "/assets/images/locations/jakobs_apartment.jpg",
+    "backgroundImage": "/assets/images/locations/jakobs_apartment.png",
     "title": "Jakob's room",
     "description": "A room uniting the sex appeal of the whole dormitory."
   },
@@ -24,11 +24,11 @@
     "title": "Lockup"
   },
   "funfair": {
-    "backgroundImage": "/assets/images/locations/funfair.jpg",
+    "backgroundImage": "/assets/images/locations/funfair.png",
     "title": "Funfair"
   },
   "graveyard": {
-    "backgroundImage": "/assets/images/locations/gas_station.jpg",
+    "backgroundImage": "/assets/images/locations/graveyard.png",
     "title": "Graveyard",
     "description": "A place of silence, peace and occasional zombie encounters"
   }
